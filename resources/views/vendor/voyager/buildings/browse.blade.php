@@ -81,8 +81,8 @@
                         <div class="col-md-3">
                 
                             <div class="profile-card-4 text-center" dir="rtl"><img
-                                    src="https://i.pinimg.com/736x/4e/6a/10/4e6a10a82b83d87c6cfc63b6ae087436.jpg"
-                                    class="img img-responsive">
+                                    src="{{ asset('gestimmaz').'/'.$data->image }}"
+                                    class="img img-responsive" style="height: 200px !important;width: 100%;">
                                 <div class="profile-content">
                                     <div class="profile-name">
                                         {{ $data->name }}
@@ -90,7 +90,7 @@
                                     <div class="profile-description">
                                         {{ $data->address }}
                                     </div>
-                                    <div class="row mt-3" style=" display: flex; justify-content: space-between; ">
+                                    <div class="row" style=" display: flex; justify-content: space-between; ">
                                         <div class="col-xs-4 ">
                                             <div class="profile-overview">
                                                 <p>الساكنة</p>
@@ -110,6 +110,15 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="row" style=" padding-left: 15px; padding-right: 15px; display: flex; " >
+                                        @foreach($actions as $action)
+                                            @if (!method_exists($action, 'massAction'))
+                                                @include('voyager::bread.partials.actions', ['action' => $action])
+                                            @endif
+                                        @endforeach
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
