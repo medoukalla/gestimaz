@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap");
+
+:root {
+  --body-color: #ebf4ff;
+  --bad-color: #ff5722;
+  --ok-color: #ff9800;
+  --good-color: #36d896;
+  --great-color: #3f51b5;
+  --track-color: #eaeef4;
+}
+
+.exchange-title {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.exchanger-kamas {
+  margin: 100px auto;
+}
+
+.mini-title {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+.ps-note {
+  padding: 10px;
+  border: 1px solid var(--good-color);
+  border-radius: 5px;
+  color: var(--good-color);
+  font-weight: 600;
+}
+
+.attention {
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: red;
+  font-weight: 600;
+}
+
+.ex-prob-report {
+  background-color: #029bbb;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.ex-prob-report h1 {
+  color: white !important;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.ex-prob-report input {
+  border: none;
+}
+
+.ex-prob-report .btn {
+  width: 150px;
+  background-color: white;
+  border: 1px solid #029bbb;
+  color: #029bbb;
+}
+
+.ex-prob-report .btn:hover {
+  background-color: #029bbb;
+  border: 1px solid white;
+  color: #ffffff;
+}
+
+.ex-command-btn {
+  background-color: #029bbb;
+  border-radius: 5px;
+  border: none;
+}
+.ex-command-btn:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.ex-command-btn:hover {
+  background-color: #007088;
+}
+
+.aider-title {
+  font-size: 21px;
+}
+
+@media (min-width: 300px) {
+  .ex-img {
+  }
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  height: 181px;
+}

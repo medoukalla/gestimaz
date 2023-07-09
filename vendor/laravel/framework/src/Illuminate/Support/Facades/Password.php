@@ -2,6 +2,7 @@
 
 namespace Illuminate\Support\Facades;
 
+use Illuminate\Auth\Passwords\PasswordBroker as PasswordsPasswordBroker;
 use Illuminate\Contracts\Auth\PasswordBroker;
 
 /**
@@ -26,7 +27,7 @@ class Password extends Facade
      *
      * @var string
      */
-    const RESET_LINK_SENT = PasswordBroker::RESET_LINK_SENT;
+    const RESET_LINK_SENT = PasswordsPasswordBroker::RESET_LINK_SENT;
 
     /**
      * Constant representing a successfully reset password.

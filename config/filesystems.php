@@ -57,8 +57,8 @@ return [
         ],
         'public_folder' => [
             'driver' => 'local',
-            'root' => public_path('gestimmaz'),
-            'url' => env('APP_URL')."/gestimmaz",
+            'root' => public_path('app'),
+            'url' => env('APP_URL')."/app",
             'visibility' => 'public',
             'throw' => false,
         ],

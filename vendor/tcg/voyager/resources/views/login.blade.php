@@ -1,86 +1,106 @@
 @extends('voyager::auth.master')
 
 @section('content')
-    <div class="login-container">
+                    
+                    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-center flex-column flex-column-fluid px-lg-10 pb-15 pb-lg-20">
 
-        <p>{{ __('voyager::login.signin_below') }}</p>
+        <!--begin::Form-->
+        <form action="{{ route('voyager.login') }}" method="post" class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="{{ route('voyager.dashboard') }}"  >
 
-        <form action="{{ route('voyager.login') }}" method="POST">
-            {{ csrf_field() }}
-            <div class="form-group form-group-default" id="emailGroup">
-                <label>{{ __('voyager::generic.email') }}</label>
-                <div class="controls">
-                    <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="{{ __('voyager::generic.email') }}" class="form-control" required>
+            @csrf
+            <!--begin::Heading-->
+            <div class="text-center mb-11">
+
+                <img src="{{ asset('app').'/'.setting('site.logo') }}" style="max-width: 300px; margin-bottom: 50px;" alt="">
+
+                <!--begin::Title-->
+                <h1 class="text-dark fw-bolder mb-3">
+                    Se connecter
+                </h1>
+                <!--end::Title-->
+
+            </div>
+            <!--begin::Heading-->
+
+            <!--begin::Error message--->
+            @if ( Session::has('error') )
+                <div class="fv-row mb-8">
+                    <div class="alert alert-danger">{{ Session::get('error') }}</div>
                 </div>
+            @endif
+
+            <!--begin::Input group--->
+            <div class="fv-row mb-8">
+                <!--begin::Email-->
+                <input type="text" placeholder="Adresse e-mail" name="email" autocomplete="off"
+                    class="form-control bg-transparent" />
+                <!--end::Email-->
             </div>
 
-            <div class="form-group form-group-default" id="passwordGroup">
-                <label>{{ __('voyager::generic.password') }}</label>
-                <div class="controls">
-                    <input type="password" name="password" placeholder="{{ __('voyager::generic.password') }}" class="form-control" required>
-                </div>
+            <!--end::Input group--->
+            <div class="fv-row mb-3">
+                <!--begin::Password-->
+                <input type="password" placeholder="Mot de passe" name="password" autocomplete="off"
+                    class="form-control bg-transparent" />
+                <!--end::Password-->
             </div>
+            <!--end::Input group--->
 
-            <div class="form-group" id="rememberMeGroup">
-                <div class="controls">
-                    <input type="checkbox" name="remember" id="remember" value="1"><label for="remember" class="remember-me-text">{{ __('voyager::generic.remember_me') }}</label>
-                </div>
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
+                <div></div>
+
+                <!--begin::Link-->
+                <a href="{{ route('voyager.reset') }}"
+                    class="link-primary">
+                    Mot de passe oublié ?
+                </a>
+                <!--end::Link-->
             </div>
+            <!--end::Wrapper-->
 
-            <button type="submit" class="btn btn-block login-button">
-                <span class="signingin hidden"><span class="voyager-refresh"></span> {{ __('voyager::login.loggingin') }}...</span>
-                <span class="signin">{{ __('voyager::generic.login') }}</span>
-            </button>
+            <!--begin::Submit button-->
+            <div class="d-grid mb-10">
+                <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
 
+                    <!--begin::Indicator label-->
+                    <span class="indicator-label">
+                        Se connecter</span>
+                    <!--end::Indicator label-->
+
+                    <!--begin::Indicator progress-->
+                    <span class="indicator-progress">
+                        S'il vous plaît, attendez... <span
+                            class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                    </span>
+                    <!--end::Indicator progress--> </button>
+            </div>
+            <!--end::Submit button-->
+
+            <!--begin::Sign up-->
+            <div class="text-gray-500 text-center fw-semibold fs-6">
+                Pas encore membre?
+
+                <a href="{{ route('voyager.register') }}"
+                    class="link-primary">
+                    S'inscrire maintenant
+                </a>
+            </div>
+            <!--end::Sign up-->
         </form>
+        <!--end::Form-->
 
-        <div style="clear:both"></div>
+    </div>
+    <!--end::Wrapper-->
 
-        @if(!$errors->isEmpty())
-            <div class="alert alert-red">
-                <ul class="list-unstyled">
-                    @foreach($errors->all() as $err)
-                        <li>{{ $err }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
 
-    </div> <!-- .login-container -->
 @endsection
 
-@section('post_js')
 
-    <script>
-        var btn = document.querySelector('button[type="submit"]');
-        var form = document.forms[0];
-        var email = document.querySelector('[name="email"]');
-        var password = document.querySelector('[name="password"]');
-        btn.addEventListener('click', function(ev){
-            if (form.checkValidity()) {
-                btn.querySelector('.signingin').className = 'signingin';
-                btn.querySelector('.signin').className = 'signin hidden';
-            } else {
-                ev.preventDefault();
-            }
-        });
-        email.focus();
-        document.getElementById('emailGroup').classList.add("focused");
-
-        // Focus events for email and password fields
-        email.addEventListener('focusin', function(e){
-            document.getElementById('emailGroup').classList.add("focused");
-        });
-        email.addEventListener('focusout', function(e){
-            document.getElementById('emailGroup').classList.remove("focused");
-        });
-
-        password.addEventListener('focusin', function(e){
-            document.getElementById('passwordGroup').classList.add("focused");
-        });
-        password.addEventListener('focusout', function(e){
-            document.getElementById('passwordGroup').classList.remove("focused");
-        });
-
-    </script>
+@section('custom_js')
+<!--begin::Custom Javascript(used for this page only)-->
+<script src="{{ asset('js/sign-in-general.js') }}"></script>
+<!--end::Custom Javascript-->
 @endsection

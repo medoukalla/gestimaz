@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'symlink_created_text'   => 'We just created the missing symlink for you.',
-    'symlink_created_title'  => 'Missing storage symlink created',
-    'symlink_failed_text'    => 'We failed to generate the missing symlink for your application. It seems like your hosting provider does not support it.',
-    'symlink_failed_title'   => 'Could not create missing storage symlink',
-    'symlink_missing_button' => 'Fix it',
-    'symlink_missing_text'   => 'We could not find a storage symlink. This could cause problems with loading media files from the browser.',
-    'symlink_missing_title'  => 'Missing storage symlink',
+    'symlink_created_text'   => 'Nous avons créé le lien symbolique manquant pour vous.',
+    'symlink_created_title'  => 'Le lien symbolique de stockage manquant a été créé',
+    'symlink_failed_text'    => 'Nous n\'avons pas pu générer le lien symbolique manquant pour votre application. Il semble que votre hébergeur ne supporte pas cette fonction.',
+    'symlink_failed_title'   => 'Impossible de créer un lien symbolique de stockage manquant',
+    'symlink_missing_button' => 'Réparer',
+    'symlink_missing_text'   => 'Nous n\'avons pu trouver le lien symbolique de stockage. Cela pourrait causer des problèmes de chargement des fichiers multimédias.',
+    'symlink_missing_title'  => 'Le lien symbolique de stockage est manquant',
 ];

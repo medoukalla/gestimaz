@@ -1,9 +1,9 @@
-<!-- !!! Add form action below -->
+<!-- !!! Add form action below --> 
 <form role="form" action="{{ route('voyager.bread.relationship') }}" method="POST">
-	<div class="modal fade modal-danger modal-relationships" id="new_relationship_modal">
-		<div class="modal-dialog relationship-panel">
-		    <div class="model-content">
-		        <div class="modal-header">
+	<div class="modal fade " id="new_relationship_modal">
+		<div class="modal-dialog">
+		    <div class="modal-content position-absolute">
+		        <div class="modal-header" style=" display: block !important; ">
 	                <button type="button" class="close" data-dismiss="modal"
 	                        aria-hidden="true">&times;</button>
 	                <h4 class="modal-title"><i class="voyager-heart"></i> {{ \Illuminate\Support\Str::singular(ucfirst($table)) }}
@@ -14,25 +14,31 @@
 			        <div class="row">
 
 			        	@if(isset($dataType->id))
-				            <div class="col-md-12 relationship_details">
+							<div class="col-md-12 mb-0">
 				                <p class="relationship_table_select">{{ \Illuminate\Support\Str::singular(ucfirst($table)) }}</p>
-				                <select class="relationship_type select2" name="relationship_type">
+							</div>
+							
+				            <div class="col-md-12 relationship_details mb-1" style=" display: flex; flex-direction: row; justify-content: space-around; align-items: baseline; ">
+				                <select class="relationship_type form-select select2" name="relationship_type">
 				                    <option value="hasOne" @if(isset($relationshipDetails->type) && $relationshipDetails->type == 'hasOne') selected="selected" @endif>{{ __('voyager::database.relationship.has_one') }}</option>
 				                    <option value="hasMany" @if(isset($relationshipDetails->type) && $relationshipDetails->type == 'hasMany') selected="selected" @endif>{{ __('voyager::database.relationship.has_many') }}</option>
 				                    <option value="belongsTo" @if(isset($relationshipDetails->type) && $relationshipDetails->type == 'belongsTo') selected="selected" @endif>{{ __('voyager::database.relationship.belongs_to') }}</option>
 				                    <option value="belongsToMany" @if(isset($relationshipDetails->type) && $relationshipDetails->type == 'belongsToMany') selected="selected" @endif>{{ __('voyager::database.relationship.belongs_to_many') }}</option>
 				                </select>
-				                <select class="relationship_table select2" name="relationship_table">
+				                <select class="relationship_table form-select select2" name="relationship_table">
 				                    @foreach($tables as $tbl)
 				                        <option value="{{ $tbl }}" @if(isset($relationshipDetails->table) && $relationshipDetails->table == $tbl) selected="selected" @endif>{{ \Illuminate\Support\Str::singular(ucfirst($tbl)) }}</option>
 				                    @endforeach
 				                </select>
-				                <span><input type="text" class="form-control" name="relationship_model" placeholder="{{ __('voyager::database.relationship.namespace') }}" value="{{ $relationshipDetails->model ?? ''}}"></span>
 				            </div>
+							<div class="col-md-12">
+								<span><input type="text" class="form-control" name="relationship_model" placeholder="{{ __('voyager::database.relationship.namespace') }}" value="{{ $relationshipDetails->model ?? ''}}"></span>
+							</div>
 				            <div class="col-md-12 relationship_details relationshipField">
-				            	<div class="belongsTo">
-				            		<label>{{ __('voyager::database.relationship.which_column_from') }} <span>{{ \Illuminate\Support\Str::singular(ucfirst($table)) }}</span> {{ __('voyager::database.relationship.is_used_to_reference') }} <span class="label_table_name"></span>?</label>
-				            		<select name="relationship_column_belongs_to" class="new_relationship_field select2">
+				            	<div class="belongsTo input-group">
+
+				            		<label class="form-label">{{ __('voyager::database.relationship.which_column_from') }} <span>{{ \Illuminate\Support\Str::singular(ucfirst($table)) }}</span> {{ __('voyager::database.relationship.is_used_to_reference') }} <span class="label_table_name"></span>?</label>
+				            		<select name="relationship_column_belongs_to" class="new_relationship_field select2 form-select mb-3">
 				                    	@foreach($fieldOptions as $data)
 				                        	<option value="{{ $data['field'] }}">{{ $data['field'] }}</option>
 				                    	@endforeach
@@ -40,13 +46,13 @@
 				               	</div>
 				               	<div class="hasOneMany flexed">
 				            		<label>{{ __('voyager::database.relationship.which_column_from') }} <span class="label_table_name"></span> {{ __('voyager::database.relationship.is_used_to_reference') }} <span>{{ \Illuminate\Support\Str::singular(ucfirst($table)) }}</span>?</label>
-					                <select name="relationship_column" class="new_relationship_field select2 rowDrop" data-table="{{ $tables[0] }}" data-selected="">
+					                <select name="relationship_column" class="new_relationship_field select2 rowDrop form-select" data-table="{{ $tables[0] }}" data-selected="">
 					                </select>
 					            </div>
 				            </div>
 				            <div class="col-md-12 relationship_details relationshipPivot">
 				            	<label>{{ __('voyager::database.relationship.pivot_table') }}:</label>
-				            	<select name="relationship_pivot" class="select2">
+				            	<select name="relationship_pivot" class="select2 form-select">
 		                        	@foreach($tables as $tbl)
 				                        <option value="{{ $tbl }}" @if(isset($relationshipDetails->table) && $relationshipDetails->table == $tbl) selected="selected" @endif>{{ \Illuminate\Support\Str::singular(ucfirst($tbl)) }}</option>
 				                    @endforeach
@@ -56,17 +62,17 @@
 				                <div class="well">
 				                    <label>{{ __('voyager::database.relationship.selection_details') }}</label>
 				                    <p><strong>{{ __('voyager::database.relationship.display_the') }} <span class="label_table_name"></span>: </strong>
-				                        <select name="relationship_label" class="rowDrop select2" data-table="{{ $tables[0] }}" data-selected="" style="width: 100%">
+				                        <select name="relationship_label" class="rowDrop select2 form-select" data-table="{{ $tables[0] }}" data-selected="" style="width: 100%">
 				                        </select>
 				                    </p>
 									<p class="relationship_key belongsToShow belongsToManyShow"><strong>{{ __('voyager::database.relationship.store_the') }}
                                         <span class="label_table_name"></span>: </strong>
-				                        <select name="relationship_key" class="rowDrop select2" data-table="{{ $tables[0] }}" data-selected="" style="width: 100%">
+				                        <select name="relationship_key" class="rowDrop select2 form-select" data-table="{{ $tables[0] }}" data-selected="" style="width: 100%">
 				                        </select>
 									</p>
                                     <p class="relationship_key hasOneShow hasManyShow"><strong>{{ __('voyager::database.relationship.store_the') }}
                                         <span>{{ \Illuminate\Support\Str::singular(ucfirst($table)) }}</span>: </strong>
-                                        <select name="relationship_key" class="select2" style="width: 100%">
+                                        <select name="relationship_key" class="select2  form-select" style="width: 100%">
                                             @foreach($fieldOptions as $data)
                                                 <option value="{{ $data['field'] }}">{{ $data['field'] }}</option>
                                             @endforeach

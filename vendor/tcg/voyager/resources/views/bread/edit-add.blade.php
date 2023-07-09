@@ -4,6 +4,7 @@
 @endphp
 
 @extends('voyager::master')
+{{-- @extends('voyager::masterOld') --}}
 
 @section('css')
     <meta name="csrf-token" content="{{ csrf_token() }}">

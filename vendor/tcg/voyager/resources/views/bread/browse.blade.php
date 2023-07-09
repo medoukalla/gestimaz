@@ -1,4 +1,5 @@
 @extends('voyager::master')
+{{-- @extends('voyager::masterOld') --}}
 
 @section('page_title', __('voyager::generic.viewing').' '.$dataType->getTranslatedAttribute('display_name_plural'))
 
@@ -44,7 +45,7 @@
                 <div class="panel panel-bordered">
                     <div class="panel-body">
                         @if ($isServerSide)
-                            <form method="get" class="form-search">
+                            <form method="get" class="form-search" style="display: none !important;">
                                 <div id="search-input">
                                     <div class="col-2">
                                         <select id="search_key" name="key">
@@ -53,10 +54,12 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-2">
-                                        <select id="filter" name="filter">
-                                            <option value="contains" @if($search->filter == "contains") selected @endif>{{ __('voyager::generic.contains') }}</option>
-                                            <option value="equals" @if($search->filter == "equals") selected @endif>=</option>
+                                    <div class="col-2" style="display: none;">
+                                        <select id="filter" name="filter" style="display: none;">
+                                            @php
+                                                $search->filter = "contains";
+                                            @endphp
+                                            <option style="display: none;" value="contains" @if($search->filter == "contains") selected @endif>{{ __('voyager::generic.contains') }}</option>
                                         </select>
                                     </div>
                                     <div class="input-group col-md-12">
@@ -75,9 +78,9 @@
                             </form>
                         @endif
                         <div class="table-responsive">
-                            <table id="dataTable" class="table table-hover">
+                            <table id="dataTable" class="table table-striped gy-7 gs-7">
                                 <thead>
-                                    <tr>
+                                    <tr class="fw-semibold fs-6 text-gray-800 border-bottom border-gray-200" >
                                         @if($showCheckboxColumn)
                                             <th class="dt-not-orderable">
                                                 <input type="checkbox" class="select_all">
@@ -170,9 +173,9 @@
                                                 @elseif($row->type == 'checkbox')
                                                     @if(property_exists($row->details, 'on') && property_exists($row->details, 'off'))
                                                         @if($data->{$row->field})
-                                                            <span class="label label-info">{{ $row->details->on }}</span>
+                                                            <span class="label label-success">{{ $row->details->on }}</span>
                                                         @else
-                                                            <span class="label label-primary">{{ $row->details->off }}</span>
+                                                            <span class="label label-danger">{{ $row->details->off }}</span>
                                                         @endif
                                                     @else
                                                     {{ $data->{$row->field} }}

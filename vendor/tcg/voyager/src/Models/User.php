@@ -8,10 +8,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use TCG\Voyager\Contracts\User as UserContract;
 use TCG\Voyager\Tests\Database\Factories\UserFactory;
 use TCG\Voyager\Traits\VoyagerUser;
+use Laravel\Cashier\Billable;
 
 class User extends Authenticatable implements UserContract
 {
-    use VoyagerUser, HasFactory;
+    use VoyagerUser, HasFactory, Billable;
 
     protected $guarded = [];
 

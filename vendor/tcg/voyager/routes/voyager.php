@@ -22,8 +22,20 @@ Route::group(['as' => 'voyager.'], function () {
 
     $namespacePrefix = '\\'.config('voyager.controllers.namespace').'\\';
 
+    // LOGIN
     Route::get('login', ['uses' => $namespacePrefix.'VoyagerAuthController@login',     'as' => 'login']);
     Route::post('login', ['uses' => $namespacePrefix.'VoyagerAuthController@postLogin', 'as' => 'postlogin']);
+
+    // REGISTER
+    Route::get('register', ['uses' => $namespacePrefix.'VoyagerAuthController@register',     'as' => 'register']);
+    Route::post('register', ['uses' => $namespacePrefix.'VoyagerAuthController@postRegister', 'as' => 'postregister']);
+
+    // Reset password
+    Route::get('reset', ['uses' => $namespacePrefix.'VoyagerAuthController@reset',     'as' => 'reset']);
+    Route::post('reset', ['uses' => $namespacePrefix.'VoyagerAuthController@reset_email',     'as' => 'reset']);
+    
+    
+
 
     Route::group(['middleware' => 'admin.user'], function () use ($namespacePrefix) {
         event(new RoutingAdmin());
@@ -136,4 +148,38 @@ Route::group(['as' => 'voyager.'], function () {
     Route::get('voyager-assets', ['uses' => $namespacePrefix.'VoyagerController@assets', 'as' => 'voyager_assets']);
 
     event(new RoutingAfter());
+
+
+    Route::middleware(['auth'])->group(function () {
+        
+        Route::get('/order/{order}/confirm_payment', [\App\Http\Controllers\BackendController::class, 'confirm_payment'])->name('orders.confirm.payment');
+        Route::get('/order/{order}/confirm_payment_undo', [\App\Http\Controllers\BackendController::class, 'confirm_payment_undo'])->name('orders.confirm.payment.undo');
+        Route::get('/order/{order}/confirm_shipping', [\App\Http\Controllers\BackendController::class, 'confirm_shipping'])->name('orders.confirm.shipping');
+        Route::get('/order/{order}/confirm_shipping_undo', [\App\Http\Controllers\BackendController::class, 'confirm_shipping_undo'])->name('orders.confirm.shipping.undo');
+        Route::get('/order/{order}/cancel', [\App\Http\Controllers\BackendController::class, 'cancel_order'])->name('order.cancel');
+        
+        
+        // User orders
+        Route::get('/user/orders', [\App\Http\Controllers\BackendController::class, 'my_orders'])->name('myorders');
+        Route::get('/user/orders/{order}', [\App\Http\Controllers\BackendController::class, 'my_orders_view'])->name('myorders.view');
+
+
+        // User exchanges
+        Route::get('/user/exchanges', [\App\Http\Controllers\BackendController::class, 'my_exchanges'])->name('myexchanges');
+        Route::get('/user/exchanges/{exchange}', [\App\Http\Controllers\BackendController::class, 'my_exchanges_view'])->name('myexchanges.view');
+
+
+        // User offers
+        Route::get('/user/offers', [\App\Http\Controllers\BackendController::class, 'my_offers'])->name('myoffers');
+        Route::get('/user/offers/{exchange}', [\App\Http\Controllers\BackendController::class, 'my_offers_view'])->name('myoffers.view');
+
+
+
+        // page for all notifications
+        Route::get('/notifications', [\App\Http\Controllers\BackendController::class, 'notifications'])->name('notifications');
+
+        // quick contact ( exchange page textarea form)
+        Route::post('/quick_contact', [\App\Http\Controllers\BackendController::class, 'quick_contact'])->name('quick.contact');
+
+    });
 });

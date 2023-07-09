@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'loggingin'    => 'Logging in',
-    'signin_below' => 'Sign In Below:',
-    'welcome'      => 'Welcome to Voyager. The Missing Admin for Laravel',
+    'loggingin'    => 'Se connecter',
+    'signin_below' => 'Connectez-vous ci-dessous :',
+    'welcome'      => 'Bienvenue dans Voyager, le panneau d\'administration qui manquait à Laravel',
 ];

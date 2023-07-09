@@ -1,16 +1,15 @@
 <?php
 
 return [
-    'field_password_keep'          => 'Leave empty to keep the same',
-    'field_select_dd_relationship' => 'Make sure to setup the appropriate relationship in the :method method of the :class class.',
-    'type_checkbox'                => 'Check Box',
-    'type_codeeditor'              => 'Code Editor',
-    'type_file'                    => 'File',
+    'field_password_keep'          => 'Laissez vide pour garder le même',
+    'field_select_dd_relationship' => 'Assurez-vous de configurer la relation appropriée dans la méthode :method de la classe :class.',
+    'type_checkbox'                => 'Case à cocher',
+    'type_codeeditor'              => 'Editeur de code',
+    'type_file'                    => 'Fichier',
     'type_image'                   => 'Image',
-    'type_radiobutton'             => 'Radio Button',
-    'type_richtextbox'             => 'Rich Textbox',
-    'type_selectdropdown'          => 'Select Dropdown',
-    'type_textarea'                => 'Text Area',
-    'type_textbox'                 => 'Text Box',
-    'type_markdowneditor'          => 'Markdown Editor',
+    'type_radiobutton'             => 'Bouton radio',
+    'type_richtextbox'             => 'Champ texte enrichi',
+    'type_selectdropdown'          => 'Menu déroulant',
+    'type_textarea'                => 'Zone de texte',
+    'type_textbox'                 => 'Champ texte',
 ];

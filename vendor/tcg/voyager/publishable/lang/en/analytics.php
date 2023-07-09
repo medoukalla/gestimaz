@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'by_pageview'            => 'By pageview',
-    'by_sessions'            => 'By sessions',
-    'by_users'               => 'By users',
-    'no_client_id'           => 'To view analytics you\'ll need to get a google analytics client id and add it to your settings for the key <code>google_analytics_client_id</code>. Get your key in your Google developer console:',
-    'set_view'               => 'Select a View',
-    'this_vs_last_week'      => 'This Week vs Last Week',
-    'this_vs_last_year'      => 'This Year vs Last Year',
-    'top_browsers'           => 'Top Browsers',
-    'top_countries'          => 'Top Countries',
-    'various_visualizations' => 'Various visualizations',
+    'by_pageview'            => 'Par pages vues',
+    'by_sessions'            => 'Par sessions',
+    'by_users'               => 'Par utilisateurs',
+    'no_client_id'           => 'Pour afficher Google Analytics, vous devrez obtenir un identifiant et l\'ajouter à vos paramètres clé : <code>google_analytics_client_id</code>. Obtenez une clé dans l\'espace développeur Google :',
+    'set_view'               => 'Sélectionner une vue',
+    'this_vs_last_week'      => 'Cette semaine p/r à la semaine dernière',
+    'this_vs_last_year'      => 'Cette année p/r à l\'année dernière',
+    'top_browsers'           => 'Top navigateurs',
+    'top_countries'          => 'Top pays',
+    'various_visualizations' => 'Visualisations diverses',
 ];

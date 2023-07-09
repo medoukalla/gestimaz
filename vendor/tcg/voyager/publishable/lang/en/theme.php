@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'footer_copyright'  => 'Made with <i class="voyager-heart"></i> by',
-    'footer_copyright2' => 'Made with rum and even more rum',
+    'footer_copyright'  => 'Fait avec <i class="voyager-heart"></i> par',
+    'footer_copyright2' => 'Fait avec du rhum et encore plus de rhum',
 ];

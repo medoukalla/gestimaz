@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" width="25" height="24">
+	<title>mad-svg</title>
+	<defs>
+		<image  width="25" height="24" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAMAAAA4a6b0AAAAAXNSR0IB2cksfwAAAEVQTFRFAAAAApu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7Apu7TGEPQwAAABd0Uk5TAFCPv+//n09g318QzzCgIECw8HCA0ODN4NgHAAAAkUlEQVR4nHWS4RaDIAhGcfqtnC1dke//qLNNPWl4/+k9gIBEGfXQBkY/J2qZLQr2dbl3GlcWV4VFi3lnsaAnR603Aayn8IIAwiAE+CSziQaOgixSOjUwO/HAMO1DM6qjBu0AaUCHKGLqRy7E53iiILbfSKWO1H8N93xcVterKojCtVZU7Rcpjz9m6vGBmYOv5y+qGQuWc88X7gAAAABJRU5ErkJggg=="/>
+		<image  width="16" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAMAAAAR8Wy4AAAAAXNSR0IB2cksfwAAAPBQTFRF6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojou742IgAAAFB0Uk5TADrEASNEVR8ug+dWUA4NkN6+qXyuoR4Lt8wWM/wtcs9g1spJP/cb4gWZ1ZKJSwNAdYF7xk83K2bZIBITuB1H3CYHdtLDOMLJXW8qf/CIMhBEfCshAAAAn0lEQVR4nGNgQABGJgjNzMLKxg6kODi5uHl4GRj4+AUEhVgZGIQFRISERMUYxCUkpUDqpGVkIRrk5MF8BgVFqElKyhBaRVUNwlBnh9AamlraOrp6QAExmK36BoZcRnoMxiZILjFVN2Mwt7BECFgJSDNY29jYwgXs7B0YGByd7J1dTBhc3Vxc3O2VmUHiZh6eXgxint4+vn4MyMDfF6QXAErYEDjQhyXsAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		.s0 { fill: #d9d9d9 } 
+	</style>
+	<path id="Layer" class="s0" d="m2.5 7.3c-0.4 0-0.7-0.3-0.7-0.7 0-0.4 0.3-0.6 0.7-0.6 0.4 0 0.7 0.2 0.7 0.6 0 0.4-0.3 0.7-0.7 0.7z"/>
+	<use id="Layer 1" href="#img1" x="0" y="0"/>
+	<use id="Layer" href="#img2" x="5" y="5"/>
+</svg>

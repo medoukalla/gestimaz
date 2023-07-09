@@ -1,43 +1,44 @@
 @extends('voyager::master')
+{{-- @extends('voyager::masterOld') --}}
 
 @section('page_title', __('voyager::generic.viewing').' '.__('voyager::generic.settings'))
 
 @section('css')
-    <style>
-        .panel-actions .voyager-trash {
+    <style>     
+        #vyager .panel-actions .voyager-trash {
             cursor: pointer;
         }
-        .panel-actions .voyager-trash:hover {
+        #vyager .panel-actions .voyager-trash:hover {
             color: #e94542;
         }
-        .settings .panel-actions{
+        #vyager .settings .panel-actions{
             right:0px;
         }
-        .panel hr {
+        #vyager .panel hr {
             margin-bottom: 10px;
         }
-        .panel {
+        #vyager .panel {
             padding-bottom: 15px;
         }
-        .sort-icons {
+        #vyager .sort-icons {
             font-size: 21px;
             color: #ccc;
             position: relative;
             cursor: pointer;
         }
-        .sort-icons:hover {
+        #vyager .sort-icons:hover {
             color: #37474F;
         }
-        .voyager-sort-desc {
+        #vyager .voyager-sort-desc {
             margin-right: 10px;
         }
-        .voyager-sort-asc {
+        #vyager .voyager-sort-asc {
             top: 10px;
         }
-        .page-title {
+        #vyager .page-title {
             margin-bottom: 0;
         }
-        .panel-title code {
+        #vyager .panel-title code {
             border-radius: 30px;
             padding: 5px 10px;
             font-size: 11px;
@@ -45,16 +46,16 @@
             position: relative;
             top: -2px;
         }
-        .modal-open .settings  .select2-container {
+        #vyager .modal-open .settings  .select2-container {
             z-index: 9!important;
             width: 100%!important;
         }
-        .new-setting {
+        #vyager .new-setting {
             text-align: center;
             width: 100%;
             margin-top: 20px;
         }
-        .new-setting .panel-title {
+        #vyager .new-setting .panel-title {
             margin: 0 auto;
             display: inline-block;
             color: #999fac;
@@ -66,29 +67,29 @@
             position: relative;
             padding-right: 15px;
         }
-        .settings .panel-title{
+        #vyager .settings .panel-title{
             padding-left:0px;
             padding-right:0px;
         }
-        .new-setting hr {
+        #vyager .new-setting hr {
             margin-bottom: 0;
             position: absolute;
             top: 7px;
             width: 96%;
             margin-left: 2%;
         }
-        .new-setting .panel-title i {
+        #vyager .new-setting .panel-title i {
             position: relative;
             top: 2px;
         }
-        .new-settings-options {
+        #vyager .new-settings-options {
             display: none;
             padding-bottom: 10px;
         }
-        .new-settings-options label {
+        #vyager .new-settings-options label {
             margin-top: 13px;
         }
-        .new-settings-options .alert {
+        #vyager .new-settings-options .alert {
             margin-bottom: 0;
         }
         #toggle_options {
@@ -108,56 +109,56 @@
             -ms-user-select: none;
             user-select: none;
         }
-        .new-setting-btn {
+        #vyager .new-setting-btn {
             margin-right: 15px;
             position: relative;
             margin-bottom: 0;
             top: 5px;
         }
-        .new-setting-btn i {
+        #vyager .new-setting-btn i {
             position: relative;
             top: 2px;
         }
-        textarea {
+        #vyager textarea {
             min-height: 120px;
         }
-        textarea.hidden{
+        #vyager textarea.hidden{
             display:none;
         }
 
-        .voyager .settings .nav-tabs{
+        #vyager .voyager .settings .nav-tabs{
             background:none;
             border-bottom:0px;
         }
 
-        .voyager .settings .nav-tabs .active a{
+        #vyager .voyager .settings .nav-tabs .active a{
             border:0px;
         }
 
-        .select2{
+        #vyager .select2{
             width:100% !important;
             border: 1px solid #f1f1f1;
             border-radius: 3px;
         }
 
-        .voyager .settings input[type=file]{
+        #vyager .voyager .settings input[type=file]{
             width:100%;
         }
 
-        .settings .select2{
+        #vyager .settings .select2{
             margin-left:10px;
         }
 
-        .settings .select2-selection{
+        #vyager .settings .select2-selection{
             height: 32px;
             padding: 2px;
         }
 
-        .voyager .settings .nav-tabs > li{
+        #vyager .voyager .settings .nav-tabs > li{
             margin-bottom:-1px !important;
         }
 
-        .voyager .settings .nav-tabs a{
+        #vyager .voyager .settings .nav-tabs a{
             text-align: center;
             background: #f8f8f8;
             border: 1px solid #f1f1f1;
@@ -167,43 +168,47 @@
             border-bottom-right-radius: 0px;
         }
 
-        .voyager .settings .nav-tabs a i{
+        #vyager .voyager .settings .nav-tabs a i{
             display: block;
             font-size: 22px;
         }
 
-        .tab-content{
+        #vyager .tab-content{
             background:#ffffff;
             border: 1px solid transparent;
         }
 
-        .tab-content>div{
+        #vyager .tab-content>div{
             padding:10px;
         }
 
-        .settings .no-padding-left-right{
+        #vyager .settings .no-padding-left-right{
             padding-left:0px;
             padding-right:0px;
         }
 
-        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{
+        #vyager .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{
             background:#fff !important;
             color:#62a8ea !important;
             border-bottom:1px solid #fff !important;
             top:-1px !important;
         }
 
-        .nav-tabs > li a{
+        #vyager .nav-tabs > li a{
             transition:all 0.3s ease;
         }
 
 
-        .nav-tabs > li.active > a:focus{
+        #vyager .nav-tabs > li.active > a:focus{
             top:0px !important;
         }
 
-        .voyager .settings .nav-tabs > li > a:hover{
+        #vyager .voyager .settings .nav-tabs > li > a:hover{
             background-color:#fff !important;
+        }
+
+        textarea.richTextBox {
+            display: none !important;
         }
     </style>
 @stop

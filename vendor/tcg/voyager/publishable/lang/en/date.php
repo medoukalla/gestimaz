@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'last_week' => 'Last Week',
-    'last_year' => 'Last Year',
-    'this_week' => 'This Week',
-    'this_year' => 'This Year',
+    'last_week' => 'La semaine dernière',
+    'last_year' => 'L\'année dernière',
+    'this_week' => 'Cette semaine',
+    'this_year' => 'Cette année',
 ];

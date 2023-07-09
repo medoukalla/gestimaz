@@ -1,4 +1,5 @@
 @extends('voyager::master')
+{{-- @extends('voyager::masterOld') --}}
 
 @section('page_title', $dataType->getTranslatedAttribute('display_name_plural') . ' ' . __('voyager::bread.order'))
 

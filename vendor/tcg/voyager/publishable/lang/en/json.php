@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'invalid'           => 'Invalid JSON',
-    'invalid_message'   => 'Seems like you introduced some invalid JSON.',
-    'valid'             => 'Valid JSON',
-    'validation_errors' => 'Validation errors',
+    'invalid'           => 'Json invalide',
+    'invalid_message'   => 'Il semble que votre JSON soit invalide.',
+    'valid'             => 'Json valide',
+    'validation_errors' => 'Erreurs de validation',
 ];

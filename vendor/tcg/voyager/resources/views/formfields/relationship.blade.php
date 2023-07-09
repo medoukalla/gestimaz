@@ -23,7 +23,7 @@
             @else
 
                 <select
-                    class="form-control select2-ajax" name="{{ $options->column }}"
+                    class="form-control select2-ajax form-select-lg form-select-solid " name="{{ $options->column }}"
                     data-get-items-route="{{route('voyager.' . $dataType->slug.'.relation')}}"
                     data-get-items-field="{{$row->field}}"
                     @if(!is_null($dataTypeContent->getKey())) data-id="{{$dataTypeContent->getKey()}}" @endif
@@ -152,7 +152,7 @@
 
             @else
                 <select
-                    class="form-control select2-ajax @if(isset($options->taggable) && $options->taggable === 'on') taggable @endif"
+                    class="form-control select2-ajax form-select-lg form-select-solid  @if(isset($options->taggable) && $options->taggable === 'on') taggable @endif"
                     name="{{ $relationshipField }}[]" multiple
                     data-get-items-route="{{route('voyager.' . $dataType->slug.'.relation')}}"
                     data-get-items-field="{{$row->field}}"
@@ -204,3 +204,82 @@
     @endif
 
 @endif
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$(document).ready(function(){
+    $('select.select2-ajax').each(function() {
+        $(this).select2({
+            width: '100%',
+            tags: $(this).hasClass('taggable'),
+            createTag: function(params) {
+                var term = $.trim(params.term);
+    
+                if (term === '') {
+                    return null;
+                }
+    
+                return {
+                    id: term,
+                    text: term,
+                    newTag: true
+                }
+            },
+            ajax: {
+                url: $(this).data('get-items-route'),
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        type: $(this).data('get-items-field'),
+                        method: $(this).data('method'),
+                        id: $(this).data('id'),
+                        page: params.page || 1
+                    }
+                    return query;
+                }
+            }
+        });
+
+        $(this).on('select2:select',function(e){
+            var data = e.params.data;
+            if (data.id == '') {
+                // "None" was selected. Clear all selected options
+                $(this).val([]).trigger('change');
+            } else {
+                $(e.currentTarget).find("option[value='" + data.id + "']").attr('selected','selected');
+            }
+        });
+
+        $(this).on('select2:unselect',function(e){
+            var data = e.params.data;
+            $(e.currentTarget).find("option[value='" + data.id + "']").attr('selected',false);
+        });
+
+        $(this).on('select2:selecting', function(e) {
+            if (!$(this).hasClass('taggable')) {
+                return;
+            }
+            var $el = $(this);
+            var route = $el.data('route');
+            var label = $el.data('label');
+            var errorMessage = $el.data('error-message');
+            var newTag = e.params.args.data.newTag;
+    
+            if (!newTag) return;
+    
+            $el.select2('close');
+    
+            $.post(route, {
+                [label]: e.params.args.data.text,
+                _tagging: true,
+            }).done(function(data) {
+                var newOption = new Option(e.params.args.data.text, data.data.id, false, true);
+                $el.append(newOption).trigger('change');
+            }).fail(function(error) {
+                toastr.error(errorMessage);
+            });
+    
+            return false;
+        });
+    });
+});
+</script>
