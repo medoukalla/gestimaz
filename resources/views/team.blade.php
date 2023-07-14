@@ -4,17 +4,13 @@
 
     <main>
 
-        <x-slider />
+        <x-page-title title="Notre équipe" />
 
-        <x-about />
-
-        <x-services />
-
-        <x-feature />
-
+        
+        <x-all-team />
+        
         <x-projects />
-
-        <x-team />
+        
 
         <x-contact />
 

@@ -17,17 +17,8 @@
                                     détail, qui ne devrait exercer aucune sorte de travail excepté.</font>
                             </font>
                         </p>
-                        <div class="footer-social mt-40">
-                            <a href="https://wasimmia.github.io/bildhub/index.html#"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a href="https://wasimmia.github.io/bildhub/index.html#"><i class="fas fa-rss"></i></a>
-                            <a href="https://wasimmia.github.io/bildhub/index.html#"><i
-                                    class="fab fa-dribbble"></i></a>
-                            <a href="https://wasimmia.github.io/bildhub/index.html#"><i
-                                    class="fab fa-behance"></i></a>
-                            <a href="https://wasimmia.github.io/bildhub/index.html#"><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
+                        
+                        
                     </div>
                 </div>
                 <div class="col-xl-3 offset-xl-1 col-lg-6 col-md-6">
@@ -43,8 +34,7 @@
                                     <span><i class="fas fa-map-marker-alt"></i></span>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">786/A Centre commercial de la
-                                                tour Romada Brooklyn, NYC</font>
+                                            <font style="vertical-align: inherit;">262 Boulevard Mohamed V, Casablanca</font>
                                         </font>
                                     </h5>
                                 </div>
@@ -54,12 +44,12 @@
                                     <span><i class="fas fa-phone-alt"></i></span>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">018- 375878-345</font>
+                                            <font style="vertical-align: inherit;">06.61.21.55.60</font>
                                         </font>
                                     </h5>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">9373 93243 - 783</font>
+                                            <font style="vertical-align: inherit;padding-left: 33px;">06.61.21.55.60</font>
                                         </font>
                                     </h5>
                                 </div>
@@ -69,12 +59,12 @@
                                     <span><i class="fas fa-envelope-open-text"></i></span>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">info@votremail.com</font>
+                                            <font style="vertical-align: inherit;">contact@gestimmaz.com</font>
                                         </font>
                                     </h5>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">jobsinfo@webmail.com</font>
+                                            <font style="vertical-align: inherit;padding-left: 33px;">contact@gestimmaz.com</font>
                                         </font>
                                     </h5>
                                 </div>
