@@ -9,7 +9,7 @@
         <div class="col-md-12">
 
 
-            @livewire('admin-offers')
+            {{-- @livewire('admin-offers') --}}
 
 
             <style>

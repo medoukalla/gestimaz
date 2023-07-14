@@ -59,7 +59,7 @@
         <div class="col-md-12">
 
 
-            @livewire('user-offers')
+            {{-- @livewire('user-offers') --}}
 
 
             <style>

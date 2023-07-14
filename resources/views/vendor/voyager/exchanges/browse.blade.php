@@ -29,7 +29,7 @@
                 <div class="card-body card-scroll h-500px pt-5">
                     
                     
-                    @livewire('exchanges', ['dataTypeContent' => $dataTypeContent])
+                    {{-- @livewire('exchanges', ['dataTypeContent' => $dataTypeContent]) --}}
 
     
                 </div>

@@ -1,170 +1,86 @@
-<!-- Header Area Start  -->
-<header class="header">
-    <!-- Top Header Area Start -->
-    <section class="top-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="content">
-                        <div class="left-content">
-                            <ul class="left-list">
-                                <li>
-                                    <p>
-                                        <a href="">
-                                            <i class="fas fa-headset"></i> Support
-                                        </a>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <i class="fas fa-envelope"></i>
-                                        <a href="mailto:contact@ankamas.com"
-                                            class="__cf_email__">Contact@ankamas.com</a>
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="right-content">
-                            <ul class="right-list">
-                                <li>
-                                    <div class="cart-icon tm-dropdown">
-                                        <!-- <i class="fas fa-cart-arrow-down"></i> -->
-                                        <img src="{{ asset('assets/images/dollar-change.svg') }}" alt="dollar-change"
-                                            class="dollar-changer">
-                                        <span class="cart-count d-none">3</span>
-                                        <div class="tm-dropdown-menu">
-                                            <ul class="currency-list">
-                                                <li>
-                                                    <a href="{{ route('change_currency', 'euro') }}">
-                                                        <img src="{{ asset('assets/images/euro.svg') }}" alt="Euro">
-                                                        <span>Euro</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('change_currency', 'usd') }}">
-                                                        <img src="{{ asset('assets/images/Dollar.svg') }}"
-                                                            alt="Dollar">
-                                                        <span>Usa dollar</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('change_currency', 'cad') }}">
-                                                        <img src="{{ asset('assets/images/Canadian_dollar.svg') }}"
-                                                            alt="cad">
-                                                        <span>Canadian dollar</span>
-                                                    </a>
-                                                </li>
+    <!-- header start -->
+    <header>
+        <div class="header-top d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="left">
+                            <li><span><i class="far fa-clock"></i></span>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">9h30 - 18h30 du lundi au dimanche</font>
+                                </font>
+                            </li>
+                            <li><span><i class="fas fa-phone-alt"></i></span>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">+800-123-4567 6587</font>
+                                </font>
+                            </li>
+                            <li><span><i class="fas fa-map-marker-alt"></i></span>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Anmoore Road Brooklyn, NY 230</font>
+                                </font>
+                            </li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="#"><i class="fab fa-facebook-messenger"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
 
-                                                <li>
-                                                    <a href="{{ route('change_currency', 'mad') }}">
-                                                        <img src="{{ asset('assets/images/mad.svg') }}" alt="mad">
-                                                        <span>Moroccan Dirham</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
+                            <li><a href="#"><i class="fab fa-skype"></i></a></li>
 
-                                    {{-- If user logged in include the notifications --}}
-                                    @auth
-                                        @livewire('frontend-notifications')
-                                    @endauth
-
-                                    @guest
-                                        <div class="notofication tm-dropdown" title="Veuillez vous connecter d'abord.">
-                                            <i class="fas fa-bell"></i>
-                                        </div>
-                                    @endguest
-
-                                </li>
-                                <li>
-                                    @guest
-                                        <a href="{{ route('voyager.login') }}  " class="sign-in">
-                                            <i class="fas fa-user"></i> Sign In
-                                        </a>
-                                    @endguest
-
-                                    @auth
-                                        <a href="{{ route('voyager.profile') }}" class="sign-in">
-                                            <i class="fas fa-user"></i> Profile
-                                        </a>
-                                    @endauth
-                                </li>
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Top Header Area End -->
-    <!--Main-Menu Area Start-->
-    <div class="mainmenu-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="{{ route('frontend.index') }}">
-                            <img src="{{ asset('assets/images/logo.png') }}" alt="" />
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu"
-                            aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse fixed-height" id="main_menu">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link active" href="{{ route('frontend.index') }}" role="button">
-                                        Accueil
-                                        <div class="mr-hover-effect"></div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('frontend.servers') }}">Achat
-                                        <div class="mr-hover-effect"></div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('frontend.sell') }}">Vente
-                                        <div class="mr-hover-effect"></div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('frontend.exchange') }}">Echange
-                                        <div class="mr-hover-effect"></div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('frontend.procedure') }}">procedure
-                                        <div class="mr-hover-effect"></div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('frontend.contact') }}">Contact
-                                        <div class="mr-hover-effect"></div>
-                                    </a>
-                                </li>
-                            </ul>
-
-                            @guest
-                                <a href="{{ route('voyager.register') }}" class="mybtn1">
-                                    Nous rejoindre
-                                </a>
-                            @endguest
-
-                            @auth
-                                <a href="{{ route('voyager.dashboard') }}" class="mybtn1">
-                                    Tableau de bord
-                                </a>
-                            @endauth
+        <div class="header-bottom-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-2">
+                        <div class="logo logo-2">
+                            <a href="index.html"><img style=" max-height: 200px; margin-top: 20px; margin-bottom: 20px; " src="{{ asset('img/logo.png') }}" alt="logo_not_found"></a>
                         </div>
-                    </nav>
+                    </div>
+                    <div class="col-xl-10 col-lg-10">
+                        <div class="header-button d-none d-lg-block f-right">
+                            <a class="thm-btn" href="/contact">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Contactez-nous</font>
+                                </font>
+                            </a>
+                        </div>
+                        <div class="main-menu f-right">
+                            <nav id="mobile-menu" style="display: block;">
+                                <ul>
+                                    
+
+                                    <li><a href="/">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Accueil</font>
+                                        </font>
+                                    </a></li>
+
+
+                                    <li><a href="/about">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">À propos</font>
+                                            </font>
+                                        </a></li>
+
+
+
+
+                                    <li><a href="/services">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Nos services</font>
+                                            </font>
+                                        </a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Main-Menu Area Start-->
-</header>
-<!-- Header Area End  -->
+    </header>
+    <!-- header end -->

@@ -44,7 +44,9 @@
                         <!--end::Date-->
 
                         <!--begin::Label-->
-                        <div class="fs-2 fw-bold text-success" style=" font-size: 1.25rem !important; ">{{ \App\Models\User::total_kama_sold() }}</div>
+                        <div class="fs-2 fw-bold text-success" style=" font-size: 1.25rem !important; ">
+                            {{-- {{ \App\Models\User::total_kama_sold() }} --}}
+                         </div>
                         <!--end::Label-->
                     </div>
                     <!--end::Stat-->
@@ -56,7 +58,9 @@
                         <!--end::Date-->
 
                         <!--begin::Label-->
-                        <div class="fs-2 fw-bold text-danger" style=" font-size: 1.25rem !important; ">{{ \App\Models\User::total_kama_bought() }}</div>
+                        <div class="fs-2 fw-bold text-danger" style=" font-size: 1.25rem !important; ">
+                            {{-- {{ \App\Models\User::total_kama_bought() }} --}}
+                        </div>
                         <!--end::Label-->
                     </div>
                     <!--end::Stat-->

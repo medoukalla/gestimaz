@@ -173,7 +173,7 @@
                                                         <span
                                                             class="badge badge-light-success align-self-center fs-base">
                                                             <i class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>
-                                                            <b>Net profit : </b> {{ \App\Models\User::total_kama_sold_net_profit() }}$
+                                                            {{-- <b>Net profit : </b> {{ \App\Models\User::total_kama_sold_net_profit() }}$ --}}
                                                         </span>
                                                         <!--end::Badge-->
 
@@ -188,7 +188,7 @@
                                             <div class="card-body d-flex align-items-end">
                                                 <!--begin::Wrapper-->
                                                 <div class="d-flex flex-column">
-                                                    <span class="fw-bolder fs-2x text-success">${{ \App\Models\User::total_kama_sold_dollar() }}</span>
+                                                    {{-- <span class="fw-bolder fs-2x text-success">${{ \App\Models\User::total_kama_sold_dollar() }}</span> --}}
                                                     <span class="fw-bold fs-7 text-gray-500">Total sold</span>
                                                 </div>
                                                 <!--end::Wrapper-->
@@ -221,7 +221,7 @@
                                                         <span
                                                             class="badge badge-light-success align-self-center fs-base">
                                                             <i class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>
-                                                            <b>Profit : </b> {{ \App\Models\User::total_kama_bought_net_profit() }}$
+                                                            {{-- <b>Profit : </b> {{ \App\Models\User::total_kama_bought_net_profit() }}$ --}}
                                                         </span>
                                                         <!--end::Badge-->
 
@@ -237,7 +237,7 @@
                                                 <!--begin::Wrapper-->
                                                 <div class="d-flex flex-column">
                                                     
-                                                    <span class="fw-bolder fs-2x text-danger">${{ \App\Models\User::total_kama_bought_dollar() }}</span>
+                                                    {{-- <span class="fw-bolder fs-2x text-danger">${{ \App\Models\User::total_kama_bought_dollar() }}</span> --}}
                                                     <span class="fw-bold fs-7 text-gray-500">Total bought</span>
                                                 </div>
                                                 <!--end::Wrapper-->

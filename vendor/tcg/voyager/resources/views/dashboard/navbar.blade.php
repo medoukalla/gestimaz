@@ -83,7 +83,7 @@
                         <!--begin::Tab content-->
                         <div class="tab-content">
 
-                            @livewire('notifications')
+                            {{-- @livewire('notifications') --}}
 
                         </div>
                         <!--end::Tab content-->

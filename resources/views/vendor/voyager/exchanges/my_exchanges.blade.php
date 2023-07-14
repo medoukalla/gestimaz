@@ -71,7 +71,7 @@
                 <div class="card-body card-scroll h-500px pt-5">
                     
                     
-                    @livewire('client-exchanges')
+                    {{-- @livewire('client-exchanges') --}}
 
     
                 </div>

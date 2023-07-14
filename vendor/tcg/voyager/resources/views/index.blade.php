@@ -75,7 +75,7 @@
                                     
                                     <div class="d-flex align-items-center">
                                         <div class="fs-2 fw-bold counted" data-kt-countup="true" data-kt-countup-value="4500" data-kt-countup-prefix="$" data-kt-initialized="1">
-                                            ${{ \App\Models\User::user_total_orders( $user->id ) }}
+                                            {{-- ${{ \App\Models\User::user_total_orders( $user->id ) }} --}}
                                         </div>
                                     </div>
                                     <div class="fw-semibold fs-6 text-gray-400">Acheter</div>
@@ -88,7 +88,7 @@
                                     
                                     <div class="d-flex align-items-center">
                                         <div class="fs-2 fw-bold counted" data-kt-countup="true" data-kt-countup-value="80" data-kt-initialized="1">
-                                            ${{ \App\Models\User::user_total_offers( $user->id ) }}
+                                            {{-- ${{ \App\Models\User::user_total_offers( $user->id ) }} --}}
                                         </div>
                                     </div>
                                     <div class="fw-semibold fs-6 text-gray-400">Vendu</div>
@@ -101,7 +101,7 @@
                                     
                                     <div class="d-flex align-items-center">
                                         <div class="fs-2 fw-bold counted" data-kt-countup="true" data-kt-countup-value="60" data-kt-countup-prefix="%" data-kt-initialized="1">
-                                            {{ \App\Models\User::user_total_exchanges( $user->id ) }}
+                                            {{-- {{ \App\Models\User::user_total_exchanges( $user->id ) }} --}}
                                         </div>
                                     </div>
                                     <div class="fw-semibold fs-6 text-gray-400">Des échanges</div>
@@ -284,7 +284,7 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <span class="fw-bold fs-6 text-gray-800">{{ \App\Models\User::count_total_orders( $user->id ) }}</span>
+                    {{-- <span class="fw-bold fs-6 text-gray-800">{{ \App\Models\User::count_total_orders( $user->id ) }}</span> --}}
                 </div>
                 <!--end::Col-->
             </div>
@@ -298,7 +298,7 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <span class="fw-bold fs-6 text-gray-800">{{ \App\Models\User::count_total_offers( $user->id ) }}</span>
+                    {{-- <span class="fw-bold fs-6 text-gray-800">{{ \App\Models\User::count_total_offers( $user->id ) }}</span> --}}
                 </div>
                 <!--end::Col-->
             </div>
@@ -312,7 +312,7 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <span class="fw-bold fs-6 text-gray-800">{{ \App\Models\User::count_total_exchanges( $user->id ) }}</span>
+                    {{-- <span class="fw-bold fs-6 text-gray-800">{{ \App\Models\User::count_total_exchanges( $user->id ) }}</span> --}}
                 </div>
                 <!--end::Col-->
             </div>
