@@ -14,7 +14,9 @@
             <div class="d-flex flex-wrap flex-stack pb-7" data-select2-id="select2-data-115-jvm2">
                 <!--begin::Title-->
                 <div class="d-flex flex-wrap align-items-center my-1">
-                    <h3 class="fw-bold me-5 my-1" style="margin-left: 25px;">Users ({{ \App\Models\User::count_number_clients() }})</h3>
+                    <h3 class="fw-bold me-5 my-1" style="margin-left: 25px;">Users (
+                        {{-- {{ \App\Models\User::count_number_clients() }}) --}}
+                    </h3>
     
                     <!--begin::Search-->
                     <div class="d-flex align-items-center position-relative my-1 d-none">
@@ -78,23 +80,24 @@
                                             
                                             <div class="d-flex flex-center flex-wrap">
                                             
-                                                <div
-                                                    class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
-                                                    <div class="fs-6 fw-bold text-gray-700">${{ \App\Models\User::user_total_orders( $user->id ) }}</div>
-                                                    <div class="fw-semibold text-gray-400">Acheter</div>
-                                                </div>
-            
-                                                <div
-                                                    class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
-                                                    <div class="fs-6 fw-bold text-gray-700">${{ \App\Models\User::user_total_offers( $user->id ) }}</div>
-                                                    <div class="fw-semibold text-gray-400">Vendu</div>
-                                                </div>
-                                                <div
-                                                    class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
-                                                    <div class="fs-6 fw-bold text-gray-700">{{ \App\Models\User::user_total_exchanges( $user->id ) }}</div>
-                                                    <div class="fw-semibold text-gray-400">Des échanges</div>
-                                                </div>
-            
+                                                <a href="">
+                                                    <div class="border border-white rounded min-w-80px py-3 px-4 mx-2 mb-3 bg-primary">
+                                                        <div class="fs-6 fw-bold text-white text-center">
+                                                            <i class="fas fa-phone"></i>
+                                                        </div>
+                                                        <div class="fw-semibold text-white text-center">Appel</div>
+                                                    </div>
+                                                </a>
+
+                                                <a href="">
+                                                    <div class="border border-white rounded min-w-80px py-3 px-4 mx-2 mb-3 bg-success">
+                                                        <div class="fs-6 fw-bold text-white text-center">$
+                                                            
+                                                        </div>
+                                                        <div class="fw-semibold text-white text-center">Whatsapp</div>
+                                                    </div>
+                                                </a>
+
                                             </div>
                                             
                                         </div>
@@ -139,7 +142,7 @@
                                                     <th class="min-w-90px sorting" tabindex="0"
                                                         aria-controls="kt_project_users_table" rowspan="1" colspan="1"
                                                         aria-label="Amount: activate to sort column ascending"
-                                                        style="width: 0px;">Payé</th>
+                                                        style="width: 0px;">Appel</th>
                                         
                                                 </tr>
                                             </thead>
@@ -176,7 +179,11 @@
                                                             <!--end::User-->
                                                         </td>
                                                         <td data-order="2023-12-20T00:00:00+01:00">{{ $user->created_at->format('D-m-Y') }}</td>
-                                                        <td>${{ \App\Models\User::user_total_orders( $user->id ) }}</td>
+                                                        <td>
+                                                            <a href="tel:+555" class="btn btn-success">
+                                                                <i class="fas fa-phone"></i>
+                                                            </a>
+                                                        </td>
         
                                                     </tr>
                                                 @endforeach
