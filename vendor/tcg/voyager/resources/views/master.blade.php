@@ -151,6 +151,8 @@
                                     
                                     <!--begin::Row-->
                                     <div class="row g-5 g-xl-10 mb-5 mb-xl-0">
+                                        
+
                                         <!--begin::Col-->
                                         <div class="col-md-4 mb-xl-10">
                                             <!--begin::Card widget 28-->
@@ -172,7 +174,7 @@
                                                             <!--begin::Badge-->
                                                             <span
                                                                 class="badge badge-light-success align-self-center fs-base">
-                                                                {{-- <b>Net profit : </b> {{ \App\Models\User::total_kama_sold_net_profit() }}$ --}}
+                                                                <b>Today : </b> 0.00$
                                                             </span>
                                                             <!--end::Badge-->
 
@@ -187,8 +189,8 @@
                                                 <div class="card-body d-flex align-items-end">
                                                     <!--begin::Wrapper-->
                                                     <div class="d-flex flex-column">
-                                                        {{-- <span class="fw-bolder fs-2x text-success">${{ \App\Models\User::total_kama_sold_dollar() }}</span> --}}
-                                                        <span class="fw-bold fs-7 text-gray-500">Total sold</span>
+                                                        <span class="fw-bolder fs-2x text-dark">$0.00</span>
+                                                        <span class="fw-bold fs-7 text-gray-500">Total exchange</span>
                                                     </div>
                                                     <!--end::Wrapper-->
                                                 </div>
@@ -204,7 +206,7 @@
                                             <div class="card card-flush ">
                                                 <!--begin::Header-->
                                                 <div class="card-header pt-7">
-                                                    <!--begin::Ca rd title-->
+                                                    <!--begin::Card title-->
                                                     <div class="card-title flex-stack flex-row-fluid">
                                                         <!--begin::Symbol-->
                                                         <div class="symbol symbol-45px me-5">
@@ -219,7 +221,7 @@
                                                             <!--begin::Badge-->
                                                             <span
                                                                 class="badge badge-light-success align-self-center fs-base">
-                                                                {{-- <b>Profit : </b> {{ \App\Models\User::total_kama_bought_net_profit() }}$ --}}
+                                                                <b>Today : </b> 0.00$
                                                             </span>
                                                             <!--end::Badge-->
 
@@ -234,9 +236,8 @@
                                                 <div class="card-body d-flex align-items-end">
                                                     <!--begin::Wrapper-->
                                                     <div class="d-flex flex-column">
-                                                        
-                                                        {{-- <span class="fw-bolder fs-2x text-danger">${{ \App\Models\User::total_kama_bought_dollar() }}</span> --}}
-                                                        <span class="fw-bold fs-7 text-gray-500">Total bought</span>
+                                                        <span class="fw-bolder fs-2x text-dark">$0.00</span>
+                                                        <span class="fw-bold fs-7 text-gray-500">Total exchange</span>
                                                     </div>
                                                     <!--end::Wrapper-->
                                                 </div>
@@ -245,6 +246,7 @@
                                             <!--end::Card widget 28-->
                                         </div>
                                         <!--end::Col-->
+
 
                                         <!--begin::Col-->
                                         <div class="col-md-4 mb-xl-10">
@@ -292,6 +294,7 @@
                                             <!--end::Card widget 28-->
                                         </div>
                                         <!--end::Col-->
+
                                     </div>
                                     <!--end::Row-->
                                     

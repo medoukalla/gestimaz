@@ -14,9 +14,7 @@
             <div class="d-flex flex-wrap flex-stack pb-7" data-select2-id="select2-data-115-jvm2">
                 <!--begin::Title-->
                 <div class="d-flex flex-wrap align-items-center my-1">
-                    <h3 class="fw-bold me-5 my-1" style="margin-left: 25px;">Users (
-                        {{-- {{ \App\Models\User::count_number_clients() }}) --}}
-                    </h3>
+                    <h3 class="fw-bold me-5 my-1" style="margin-left: 25px;">Utilisateurs</h3>
     
                     <!--begin::Search-->
                     <div class="d-flex align-items-center position-relative my-1 d-none">
