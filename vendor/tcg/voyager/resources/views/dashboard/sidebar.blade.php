@@ -17,7 +17,7 @@
             <!--begin::Links-->
             <div class="mb-0">
                 <!--begin::Title-->
-                <h3 class="text-gray-800 fw-bold mb-8">Pages</h3>
+                <h3 class="text-gray-800 fw-bold mb-8">الصفحات</h3>
                 <!--end::Title-->
 
                 <!--begin::Row-->

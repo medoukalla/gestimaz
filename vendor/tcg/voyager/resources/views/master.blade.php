@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}" dir="ltr">
+<html lang="{{ config('app.locale') }}" dir="rtl">
 <head>
     <title>@yield('page_title', setting('admin.title') . " - " . setting('admin.description'))</title>
 
@@ -26,8 +26,8 @@
     @endif
 
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-    <link href="{{ asset('css/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/plugins.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/style.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
 
 
@@ -145,160 +145,137 @@
                             <!--end::Toolbar-->
 
                             <!--begin::Content-->
-                            <div id="kt_app_content" class="app-content  flex-column-fluid ">
-
-                                @if ( Auth::user()->role_id != 2 )
+                            <div class="card mb-5 mb-xl-10">
+                                <div class="card-body pt-9 pb-0">
                                     
-                                    <!--begin::Row-->
-                                    <div class="row g-5 g-xl-10 mb-5 mb-xl-0">
+                                    <div class="d-flex flex-wrap flex-sm-nowrap">
                                         
-
-                                        <!--begin::Col-->
-                                        <div class="col-md-4 mb-xl-10">
-                                            <!--begin::Card widget 28-->
-                                            <div class="card card-flush ">
-                                                <!--begin::Header-->
-                                                <div class="card-header pt-7">
-                                                    <!--begin::Card title-->
-                                                    <div class="card-title flex-stack flex-row-fluid">
-                                                        <!--begin::Symbol-->
-                                                        <div class="symbol symbol-45px me-5">
-                                                            <span class="symbol-label bg-light-info">
-                                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                                            </span>
-                                                        </div>
-                                                        <!--end::Symbol-->
-
-                                                        <!--begin::Wrapper-->
-                                                        <div class="me-n2">
-                                                            <!--begin::Badge-->
-                                                            <span
-                                                                class="badge badge-light-success align-self-center fs-base">
-                                                                <b>Today : </b> 0.00$
-                                                            </span>
-                                                            <!--end::Badge-->
-
-                                                        </div>
-                                                        <!--end::Wrapper-->
-                                                    </div>
-                                                    <!--end::Header-->
-                                                </div>
-                                                <!--end::Card title-->
-
-                                                <!--begin::Card body-->
-                                                <div class="card-body d-flex align-items-end">
-                                                    <!--begin::Wrapper-->
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder fs-2x text-dark">$0.00</span>
-                                                        <span class="fw-bold fs-7 text-gray-500">Total exchange</span>
-                                                    </div>
-                                                    <!--end::Wrapper-->
-                                                </div>
-                                                <!--end::Card body-->
+                                        <div class="me-7 mb-9">
+                                            <div class="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
+                                                <img src="{{ asset('app').'/'.Auth::user()->avatar }}" alt="image">
+                                                
                                             </div>
-                                            <!--end::Card widget 28-->
                                         </div>
-                                        <!--end::Col-->
-
-                                        <!--begin::Col-->
-                                        <div class="col-md-4 mb-xl-10">
-                                            <!--begin::Card widget 28-->
-                                            <div class="card card-flush ">
-                                                <!--begin::Header-->
-                                                <div class="card-header pt-7">
-                                                    <!--begin::Card title-->
-                                                    <div class="card-title flex-stack flex-row-fluid">
-                                                        <!--begin::Symbol-->
-                                                        <div class="symbol symbol-45px me-5">
-                                                            <span class="symbol-label bg-light-info">
-                                                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                                                            </span>
-                                                        </div>
-                                                        <!--end::Symbol-->
-
-                                                        <!--begin::Wrapper-->
-                                                        <div class="me-n2">
-                                                            <!--begin::Badge-->
-                                                            <span
-                                                                class="badge badge-light-success align-self-center fs-base">
-                                                                <b>Today : </b> 0.00$
-                                                            </span>
-                                                            <!--end::Badge-->
-
-                                                        </div>
-                                                        <!--end::Wrapper-->
+                                        
+                                        <div class="flex-grow-1">
+                                            
+                                            <div class="d-flex justify-content-between align-items-sta/metronic8/demo37/assets/media/avatars/300-1.jpgrt flex-wrap mb-2">
+                                                
+                                                <div class="d-flex flex-column">
+                                                    
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <a href="#" class="text-gray-900 text-hover-primary fs-3 fw-bold me-1"> {{ Auth::user()->name }}</a>
+                                                        
                                                     </div>
-                                                    <!--end::Header-->
-                                                </div>
-                                                <!--end::Card title-->
-
-                                                <!--begin::Card body-->
-                                                <div class="card-body d-flex align-items-end">
-                                                    <!--begin::Wrapper-->
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder fs-2x text-dark">$0.00</span>
-                                                        <span class="fw-bold fs-7 text-gray-500">Total exchange</span>
+                                                               
+                                                    <div class="d-flex flex-wrap fw-semibold fs-6 mb-4 pe-2">
+                                                        <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2">
+                                                            {{ Auth::user()->role->display_name }}
+                                                        </a>
+                                                        
+                                                        <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary mb-2">
+                                                            {{ Auth::user()->email }}
+                                                        </a>
                                                     </div>
-                                                    <!--end::Wrapper-->
+                                                    
                                                 </div>
-                                                <!--end::Card body-->
+                                                
                                             </div>
-                                            <!--end::Card widget 28-->
-                                        </div>
-                                        <!--end::Col-->
+                                            
+                        
+                                            
+                                            <div class="d-flex flex-wrap flex-stack">
+                                                
+                                                <div class="d-flex flex-column flex-grow-1 pe-8">
+                                                    
+                                                    <div class="d-flex flex-wrap">
+                                                        
+                                                        <a href="{{ route('voyager.buildings.index') }}">
+                                                            <div class="border border-gray-300 border-dashed bg-light-secondary rounded min-w-125px py-3 px-4 me-6 mb-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="fs-2 fw-bold counted">
+                                                                        {{ \App\Models\Admin::count_total_buildings() }}
+                                                                </div>
+                                                                </div>
+                                                                <div class="fw-semibold fs-6 text-gray-400">عدد العمارات</div>
+                                                            </div>
+                                                        </a>
+                                                        
+                        
+                                                        
+                                                        <a href="{{ route('voyager.apartments.index') }}">
+                                                            <div class="border border-gray-300 border-dashed bg-light-secondary rounded min-w-125px py-3 px-4 me-6 mb-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="fs-2 fw-bold counted">
+                                                                        {{ \App\Models\Admin::count_total_locals() }}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="fw-semibold fs-6 text-gray-400">عدد المحلات</div>
+                                                                
+                                                            </div>
+                                                        </a>
+                                                        
+                        
+                                                        
+                                                        <a href="{{ route('voyager.users.index') }}">
+                                                            <div class="border border-gray-300 border-dashed bg-light-secondary rounded min-w-125px py-3 px-4 me-6 mb-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="fs-2 fw-bold counted" >
+                                                                        {{ \App\Models\Admin::count_total_team_members() }}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="fw-semibold fs-6 text-gray-400">أعضاء الفريق</div>        
+                                                            </div>
+                                                        </a>
+                        
+                        
+                                                        <a href="{{ route('voyager.projects.index') }}">
+                                                           <div class="border border-gray-300 border-dashed bg-light-secondary rounded min-w-125px py-3 px-4 me-6 mb-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="fs-2 fw-bold counted" >
+                                                                        {{ \App\Models\Admin::count_total_projects() }}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="fw-semibold fs-6 text-gray-400">عدد المشاريع</div>
+                                                            </div>
+                                                        </a>                                                        
 
 
-                                        <!--begin::Col-->
-                                        <div class="col-md-4 mb-xl-10">
-                                            <!--begin::Card widget 28-->
-                                            <div class="card card-flush ">
-                                                <!--begin::Header-->
-                                                <div class="card-header pt-7">
-                                                    <!--begin::Card title-->
-                                                    <div class="card-title flex-stack flex-row-fluid">
-                                                        <!--begin::Symbol-->
-                                                        <div class="symbol symbol-45px me-5">
-                                                            <span class="symbol-label bg-light-info">
-                                                                <i class="fa-solid fa-arrows-left-right-to-line"></i>
-                                                            </span>
-                                                        </div>
-                                                        <!--end::Symbol-->
+                                                        <a href="{{ route('voyager.payments.index') }}">
+                                                            <div class="border border-gray-300 border-dashed bg-light-success rounded min-w-125px py-3 px-4 me-6 mb-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="fs-2 fw-bold counted" >
+                                                                        {{ \App\Models\Admin::count_amount_payment_month() }} درهم
+                                                                    </div>
+                                                                </div>
+                                                                <div class="fw-semibold fs-6 ">دفعات هذا الشهر</div>
+                                                            </div>
+                                                        </a>
 
-                                                        <!--begin::Wrapper-->
-                                                        <div class="me-n2">
-                                                            <!--begin::Badge-->
-                                                            <span
-                                                                class="badge badge-light-success align-self-center fs-base">
-                                                                <b>Today : </b> 0.00$
-                                                            </span>
-                                                            <!--end::Badge-->
-
-                                                        </div>
-                                                        <!--end::Wrapper-->
+                                                        <a href="{{ route('voyager.invoices.index') }}">
+                                                            <div class="border border-gray-300 border-dashed bg-light-danger rounded min-w-125px py-3 px-4 me-6 mb-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="fs-2 fw-bold counted" >
+                                                                        {{ \App\Models\Admin::count_amount_invoices_month() }} درهم
+                                                                    </div>
+                                                                </div>
+                                                                <div class="fw-semibold fs-6 ">دفعات هذا الشهر</div>
+                                                            </div>
+                                                        </a>
+                                                        
                                                     </div>
-                                                    <!--end::Header-->
+                                                    
                                                 </div>
-                                                <!--end::Card title-->
-
-                                                <!--begin::Card body-->
-                                                <div class="card-body d-flex align-items-end">
-                                                    <!--begin::Wrapper-->
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder fs-2x text-dark">$0.00</span>
-                                                        <span class="fw-bold fs-7 text-gray-500">Total exchange</span>
-                                                    </div>
-                                                    <!--end::Wrapper-->
-                                                </div>
-                                                <!--end::Card body-->
+                                                
+                        
                                             </div>
-                                            <!--end::Card widget 28-->
+                                            <!--end::Stats-->
                                         </div>
-                                        <!--end::Col-->
-
+                                        <!--end::Info-->
                                     </div>
-                                    <!--end::Row-->
-                                    
-                                @endif
+                                
+                                </div>
+                            </div>
                                 
                                 <!-- PAGE CONTENT -->
                                 <div id="vyager" class="card card-flush ">

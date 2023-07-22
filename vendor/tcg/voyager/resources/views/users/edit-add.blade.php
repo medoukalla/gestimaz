@@ -1,5 +1,6 @@
 @extends('voyager::master')
 
+
 @section('page_title', __('voyager::generic.'.(isset($dataTypeContent->id) ? 'edit' : 'add')).' '.$dataType->getTranslatedAttribute('display_name_singular'))
 
 @section('css')
@@ -60,7 +61,7 @@
                                 <input type="password" class="form-control" id="password" name="password" value="" autocomplete="new-password">
                             </div>
 
-                            @can('editRoles', $dataTypeContent)
+                            {{-- @can('editRoles', $dataTypeContent)
                                 <div class="form-group">
                                     <label for="default_role">{{ __('voyager::profile.role_default') }}</label>
                                     @php
@@ -79,7 +80,7 @@
                                     @endphp
                                     @include('voyager::formfields.relationship')
                                 </div>
-                            @endcan
+                            @endcan --}}
                             @php
                             if (isset($dataTypeContent->locale)) {
                                 $selected_locale = $dataTypeContent->locale;
