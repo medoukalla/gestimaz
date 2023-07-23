@@ -120,7 +120,7 @@
                                             <!--begin::Title-->
                                             <h1
                                                 class="page-heading d-flex flex-column justify-content-center text-dark fw-bold fs-lg-2x gap-2">
-                                                <span><span class="fw-light">Bienvenu @auth </span>{{ Auth::user()->name }}</span> @endauth
+                                                <span><span class="fw-light">مرحبا @auth </span>{{ Auth::user()->name }}</span> @endauth
 
                                             </h1>
                                             <!--end::Title-->
@@ -135,7 +135,7 @@
                                     <!--begin::Actions-->
                                     <div class="d-flex align-self-center flex-center flex-shrink-0">
                                         <a href="Javascript:;" class="btn btn-sm btn-danger ms-3 px-4 py-3" onclick="document.getElementById('signoutFrom').submit();">
-                                            Se déconnecter
+                                            تسجيل خروج
                                         </a>
                                     </div>
                                     <!--end::Actions-->

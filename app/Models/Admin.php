@@ -18,9 +18,9 @@ class Admin extends Model
 
     }
 
-    // return number of team members  ( Team member role = 4 )
+    // return number of team members  ( Team member role = 2 )
     static function count_total_team_members() {
-        return User::select('id')->where('role_id', 4)->count();
+        return User::select('id')->where('role_id', 2)->count();
     }
 
     // return number of hosses in total ( house, office, garage )
@@ -36,7 +36,7 @@ class Admin extends Model
     // return total of peyments in the current mont 
     static function count_amount_payment_month() {
         $current_month =  Carbon::now()->format('m');
-        $payments = Payment::whereMonth( 'created_at', $current_month );
+        $payments = Payment::whereMonth( 'date', $current_month );
         if ( $payments->count() < 1 ) {
             return 0;
         }

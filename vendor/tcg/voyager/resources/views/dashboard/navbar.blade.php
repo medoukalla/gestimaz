@@ -74,7 +74,7 @@
                             style="background-image:url('https://preview.keenthemes.com/metronic8/demo37/assets/media/misc/menu-header-bg.jpg')">
                             <!--begin::Title-->
                             <h3 class="text-white fw-semibold px-9 mt-10 mb-6">
-                                les notifications
+                                الإشعارات
                             </h3>
                             <!--end::Title-->
                         </div>
@@ -83,7 +83,7 @@
                         <!--begin::Tab content-->
                         <div class="tab-content">
 
-                            {{-- @livewire('notifications') --}}
+                            @livewire('notifications')
 
                         </div>
                         <!--end::Tab content-->

@@ -26,7 +26,7 @@
             {{ csrf_field() }}
 
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <div class="panel panel-bordered">
                     {{-- <div class="panel"> --}}
                         @if (count($errors) > 0)
@@ -53,13 +53,20 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password">{{ __('voyager::generic.password') }}</label>
-                                @if(isset($dataTypeContent->password))
-                                    <br>
-                                    <small>{{ __('voyager::profile.password_hint') }}</small>
-                                @endif
-                                <input type="password" class="form-control" id="password" name="password" value="" autocomplete="new-password">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="phone" class="form-control" id="phone" name="phone" placeholder="رقم الهاتف"
+                                       value="{{ old('phone', $dataTypeContent->phone ?? '') }}">
                             </div>
+
+                            <div class="form-group">
+                                <label for="job">المهنة</label>
+                                <input type="job" class="form-control" id="job" name="job" placeholder="المهنة"
+                                       value="{{ old('job', $dataTypeContent->job ?? '') }}">
+                            </div>
+
+                            
+                            <input type="hidden" class="form-control" id="password" name="password" value="{{ rand(10000000, 900000000) }}" autocomplete="new-password">
+                            
 
                             {{-- @can('editRoles', $dataTypeContent)
                                 <div class="form-group">
@@ -81,28 +88,12 @@
                                     @include('voyager::formfields.relationship')
                                 </div>
                             @endcan --}}
-                            @php
-                            if (isset($dataTypeContent->locale)) {
-                                $selected_locale = $dataTypeContent->locale;
-                            } else {
-                                $selected_locale = config('app.locale', 'en');
-                            }
-
-                            @endphp
-                            <div class="form-group">
-                                <label for="locale">{{ __('voyager::generic.locale') }}</label>
-                                <select class="form-control select2" id="locale" name="locale">
-                                    @foreach (Voyager::getLocales() as $locale)
-                                    <option value="{{ $locale }}"
-                                    {{ ($locale == $selected_locale ? 'selected' : '') }}>{{ $locale }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="panel panel panel-bordered panel-warning">
                         <div class="panel-body">
                             <div class="form-group">
