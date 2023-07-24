@@ -5,12 +5,12 @@
             <div class="col-xl-5 col-lg-5 col-md-12">
                 <div class="contact-left">
                     <div class="contact-thumb-left">
-                        <img src="{{ asset('img/contact-bg.jpg') }}"
+                        <img src="{{ asset('app').'/'.setting('contact.big_image') }}"
                             alt="image non trouvée">
                         <div class="contact-shape"></div>
                     </div>
                     <div class="contact-thumb-right">
-                        <img src="{{ asset('img/contact-bg-02.jpg') }}" style=" max-width: 300px; " alt="image non trouvée">
+                        <img src="{{ asset('app').'/'.setting('contact.small_image') }}" style=" max-width: 300px; " alt="image non trouvée">
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                         </h5>
                         <h2>
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Obtenez une consultation gratuite </font>
+                                <font style="vertical-align: inherit;">{{ setting('contact.title') }}</font>
                             </font><span>
                                 <font style="vertical-align: inherit;">
                                     <font style="vertical-align: inherit;">.</font>

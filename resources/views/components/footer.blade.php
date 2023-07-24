@@ -6,15 +6,13 @@
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="footer-left-widget mb-40">
                         <div class="footer-logo">
-                            <img src="{{ asset('img/logo.png') }}" style=" max-width: 200px; " alt="logo_not_found">
+                            <img src="{{ asset('app').'/'.setting('site.logo') }}" style=" max-width: 200px; " alt="logo_not_found">
                         </div>
                         <p>
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Il est très important de prendre soin du
-                                    patient, et le patient sera suivi, mais en même temps, il va traverser de
-                                    grandes douleurs et souffrances. </font>
-                                <font style="vertical-align: inherit;">Car permettez-moi d'en venir au moindre
-                                    détail, qui ne devrait exercer aucune sorte de travail excepté.</font>
+                                <font style="vertical-align: inherit;">
+                                    {{ setting('site.description') }}
+                                </font>
                             </font>
                         </p>
                         
@@ -34,7 +32,7 @@
                                     <span><i class="fas fa-map-marker-alt"></i></span>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">262 Boulevard Mohamed V, Casablanca</font>
+                                            <font style="vertical-align: inherit;">{{ setting('site.address') }}</font>
                                         </font>
                                     </h5>
                                 </div>
@@ -44,12 +42,12 @@
                                     <span><i class="fas fa-phone-alt"></i></span>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">06.61.21.55.60</font>
+                                            <font style="vertical-align: inherit;">{{ setting('site.phone') }}</font>
                                         </font>
                                     </h5>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;padding-left: 33px;">06.61.21.55.60</font>
+                                            <font style="vertical-align: inherit;padding-left: 33px;">{{ setting('site.phone_2') }}</font>
                                         </font>
                                     </h5>
                                 </div>
@@ -59,12 +57,12 @@
                                     <span><i class="fas fa-envelope-open-text"></i></span>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">contact@gestimmaz.com</font>
+                                            <font style="vertical-align: inherit;">{{ setting('site.email') }}</font>
                                         </font>
                                     </h5>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;padding-left: 33px;">contact@gestimmaz.com</font>
+                                            <font style="vertical-align: inherit;padding-left: 33px;">{{ setting('site.email') }}</font>
                                         </font>
                                     </h5>
                                 </div>

@@ -1,3 +1,6 @@
+@php
+    $projects = \App\Models\Project::get_projects();
+@endphp
 <!-- project start -->
 <section class="project-area pos-rel pt-120 pb-120">
     <div class="container-fluid">
@@ -9,58 +12,23 @@
             <h2>PROJET QUE NOUS COMPLETONS<span>.</span></h2>
         </div>
         <div class="project-active owl-carousel">
-            <div class="single-project">
-                <div class="project-thumb">
-                    <img src="{{ asset('img/project-01.jpg') }}" alt="image_not_found">
-                </div>
-                <div class="project-text">
-                    <div class="project-tag">
-                        <h4><a href="#">Rénovation</a></h4>
+
+            @foreach ( $projects as $project )
+                <div class="single-project">
+                    <div class="project-thumb">
+                        <img src="{{ asset('app').'/'.$project->image }}" alt="image_not_found">
                     </div>
-                    <div class="project-text-box">
-                        <p>Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="single-project">
-                <div class="project-thumb">
-                    <img src="{{ asset('img/project-02.jpg') }}" alt="image_not_found">
-                </div>
-                <div class="project-text">
-                    <div class="project-tag">
-                        <h4><a href="#">Rénovation</a></h4>
-                    </div>
-                    <div class="project-text-box">
-                        <p>Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.</p>
+                    <div class="project-text">
+                        <div class="project-tag">
+                            <h4><a href="#">{{ $project->title }}</a></h4>
+                        </div>
+                        <div class="project-text-box">
+                            <p>{{ $project->description }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="single-project">
-                <div class="project-thumb">
-                    <img src="{{ asset('img/project-03.jpg') }}" alt="image_not_found">
-                </div>
-                <div class="project-text">
-                    <div class="project-tag">
-                        <h4><a href="#">Rénovation</a></h4>
-                    </div>
-                    <div class="project-text-box">
-                        <p>Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="single-project">
-                <div class="project-thumb">
-                    <img src="{{ asset('img/project-02.jpg') }}" alt="image_not_found">
-                </div>
-                <div class="project-text">
-                    <div class="project-tag">
-                        <h4><a href="#">Rénovation</a></h4>
-                    </div>
-                    <div class="project-text-box">
-                        <p>Rorem ipsum dolor sit amet, consectetur adipisic ing elit, sed do eiusmod tempor.</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </section>

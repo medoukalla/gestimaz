@@ -6,8 +6,8 @@
                     
                     
                     <div class="single-slider slider-height pos-rel d-flex align-items-center slick-slide"
-                        data-background="{{ asset('img/slider-bg-03.jpg') }}" data-slick-index="1"
-                        style="background-image: url({{ asset('img/slider-bg-03.jpg') }}); width: 1905px; position: relative; left: -1905px; top: 0px; z-index: 999; opacity: 1;"
+                        data-background="{{ asset('app').'/'.setting('header.image') }}" data-slick-index="1"
+                        style="background-image: url({{ asset('app').'/'.setting('header.image') }}); width: 1905px; position: relative; left: -1905px; top: 0px; z-index: 999; opacity: 1;"
                         aria-hidden="false" tabindex="0">
                         <div class="container" >
                             <div class="row">
@@ -16,13 +16,13 @@
                                         <h5 data-animation="fadeInUp" data-delay=".2s" class=""
                                             style="animation-delay: 0.2s;">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">Syndic professionnelle</font>
+                                                <font style="vertical-align: inherit;">{{ setting('header.sub_headline') }}</font>
                                             </font>
                                         </h5>
                                         <h1 data-animation="fadeInUp" data-delay=".4s" class=""
                                             style="animation-delay: 0.4s;">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">La Facilite de votre vie... C'est notre metier</font>
+                                                <font style="vertical-align: inherit;">{{ setting('header.headline') }}</font>
                                             </font><span>
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">.</font>
@@ -32,15 +32,13 @@
                                         <p data-animation="fadeInUp" data-delay=".6s" class=""
                                             style="animation-delay: 0.6s;">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">La douleur elle-même est
-                                                    grande et les apisisis seront suivis, mais en même temps ils
-                                                    tombent comme un grand travail et une grande douleur. </font>
-                                                <font style="vertical-align: inherit;">Au fil des ans, je viendrai.
+                                                <font style="vertical-align: inherit;">
+                                                {{ setting('header.description') }}
                                                 </font>
                                             </font>
                                         </p>
                                         <div class="slider-btn">
-                                            <a data-animation="fadeInLeft" data-delay=".6s" class="thm-btn" href="#"
+                                            <a data-animation="fadeInLeft" data-delay=".6s" class="thm-btn" href="{{ route('frontend.contact') }}"
                                                 tabindex="0" style="animation-delay: 0.6s;">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">Contactez-nous</font>
@@ -53,8 +51,8 @@
                         </div>
                     </div>
                     <div class="single-slider slider-height pos-rel d-flex align-items-center slick-slide"
-                        data-background="{{ asset('img/slider-bg-03.jpg') }}" data-slick-index="1"
-                        style="background-image: url({{ asset('img/slider-bg-03.jpg') }}); width: 1905px; position: relative; left: -1905px; top: 0px; z-index: 999; opacity: 1;"
+                        data-background="{{ asset('app').'/'.setting('header.image') }}" data-slick-index="1"
+                        style="background-image: url({{ asset('app').'/'.setting('header.image') }}); width: 1905px; position: relative; left: -1905px; top: 0px; z-index: 999; opacity: 1;"
                         aria-hidden="false" tabindex="0">
                         <div class="container" >
                             <div class="row">
@@ -63,13 +61,13 @@
                                         <h5 data-animation="fadeInUp" data-delay=".2s" class=""
                                             style="animation-delay: 0.2s;">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">Syndic professionnelle</font>
+                                                <font style="vertical-align: inherit;">{{ setting('header.sub_headline') }}</font>
                                             </font>
                                         </h5>
                                         <h1 data-animation="fadeInUp" data-delay=".4s" class=""
                                             style="animation-delay: 0.4s;">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">La Facilite de votre vie... C'est notre metier</font>
+                                                <font style="vertical-align: inherit;">{{ setting('header.headline') }}</font>
                                             </font><span>
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">.</font>
@@ -79,15 +77,13 @@
                                         <p data-animation="fadeInUp" data-delay=".6s" class=""
                                             style="animation-delay: 0.6s;">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">La douleur elle-même est
-                                                    grande et les apisisis seront suivis, mais en même temps ils
-                                                    tombent comme un grand travail et une grande douleur. </font>
-                                                <font style="vertical-align: inherit;">Au fil des ans, je viendrai.
+                                                <font style="vertical-align: inherit;">
+                                                {{ setting('header.description') }}
                                                 </font>
                                             </font>
                                         </p>
                                         <div class="slider-btn">
-                                            <a data-animation="fadeInLeft" data-delay=".6s" class="thm-btn" href="#"
+                                            <a data-animation="fadeInLeft" data-delay=".6s" class="thm-btn" href="{{ route('frontend.contact') }}"
                                                 tabindex="0" style="animation-delay: 0.6s;">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">Contactez-nous</font>

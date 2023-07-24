@@ -7,25 +7,24 @@
                     <ul class="left">
                         <li><span><i class="far fa-clock"></i></span>
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">9h30 - 18h30 du lundi au dimanche</font>
+                                <font style="vertical-align: inherit;">{{ setting('site.timing') }}</font>
                             </font>
                         </li>
                         <li><span><i class="fas fa-phone-alt"></i></span>
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">06.61.21.55.60</font>
+                                <font style="vertical-align: inherit;">{{ setting('site.phone') }}</font>
                             </font>
                         </li>
                         <li><span><i class="fas fa-map-marker-alt"></i></span>
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">262 Boulevard Mohamed V, Casablanca</font>
+                                <font style="vertical-align: inherit;">{{ setting('site.email') }}</font>
                             </font>
                         </li>
                     </ul>
                     <ul class="right">
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="{{ setting('social-networks.instagram') }}" target="_blanck" ><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="{{ setting('social-networks.facebook') }}" target="_blanck" ><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="{{ setting('social-networks.whatsapp') }}" target="_blanck" ><i class="fab fa-facebook"></i></a></li>
 
                     </ul>
                 </div>
@@ -39,7 +38,7 @@
                     <div class="logo logo-2">
                         <a href="{{ route('frontend.index') }}">
                             <img style=" max-height: 120px; margin-top: 20px; margin-bottom: 20px; "
-                                src="{{ asset('img/logo.png') }}" alt="logo_not_found">
+                                src="{{ asset('app').'/'.setting('site.logo') }}" alt="logo_not_found">
                         </a>
                     </div>
                 </div>
