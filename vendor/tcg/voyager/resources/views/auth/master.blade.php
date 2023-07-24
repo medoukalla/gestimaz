@@ -17,8 +17,6 @@
     <link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
 
-
-
     @yield('css')
     @yield('head')
 </head>
@@ -79,12 +77,6 @@
                         <img alt="Logo" src="{{ asset('app').'/'.setting('site.logo') }}" style="max-width: 300px;" />
                     </a>
                     <!--end::Logo-->
-
-                    <!--begin::Title-->
-                    <h2 class="text-white fw-normal m-0">
-                        {{ setting('site.description') }}
-                    </h2>
-                    <!--end::Title-->
                 </div>
                 <!--begin::Aside-->
             </div>

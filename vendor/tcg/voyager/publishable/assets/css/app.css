@@ -11506,26 +11506,26 @@ print {
    border-color: #5897fb
 }
 
-#vyager .toast-title {
+.toast-title {
    font-weight: 700
 }
 
-#vyager .toast-message {
+.toast-message {
    -ms-word-wrap: break-word;
    word-wrap: break-word
 }
 
-#vyager .toast-message a,
-#vyager .toast-message label {
+.toast-message a,
+.toast-message label {
    color: #fff
 }
 
-#vyager .toast-message a:hover {
+.toast-message a:hover {
    color: #ccc;
    text-decoration: none
 }
 
-#vyager .toast-close-button {
+.toast-close-button {
    color: #fff;
    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
    filter: alpha(opacity=80);
@@ -11541,8 +11541,8 @@ print {
    top: -.3em
 }
 
-#vyager .toast-close-button:focus,
-#vyager .toast-close-button:hover {
+.toast-close-button:focus,
+.toast-close-button:hover {
    color: #000;
    cursor: pointer;
    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
@@ -11551,13 +11551,13 @@ print {
    text-decoration: none
 }
 
-#vyager .rtl .toast-close-button {
+.rtl .toast-close-button {
    float: left;
    left: -.3em;
    right: .3em
 }
 
-#vyager button.toast-close-button {
+button.toast-close-button {
    -webkit-appearance: none;
    background: transparent;
    border: 0;
@@ -11565,48 +11565,81 @@ print {
    padding: 0
 }
 
-#vyager .toast-top-center {
+.toast-top-center {
    right: 0;
    top: 0;
    width: 100%
 }
 
-#vyager .toast-bottom-center {
+.toast-bottom-center {
    bottom: 0;
    right: 0;
    width: 100%
 }
 
-#vyager .toast-top-full-width {
+.toast-top-full-width {
    right: 0;
    top: 0;
    width: 100%
 }
 
-#vyager .toast-bottom-full-width {
+.toast-bottom-full-width {
    bottom: 0;
    right: 0;
    width: 100%
 }
 
-#vyager .toast-top-left {
+.toast-top-left {
    left: 12px;
    top: 12px
 }
 
-#vyager .toast-top-right {
+.toast-top-right {
    right: 12px;
    top: 12px
 }
 
-#vyager .toast-bottom-right {
+.toast-bottom-right {
    bottom: 12px;
    right: 12px
 }
 
-#vyager .toast-bottom-left {
+.toast-bottom-left {
    bottom: 12px;
    left: 12px
+}
+
+
+
+.toast {
+   background-color: #030303
+}
+
+.toast-success {
+   background-color: #51a351
+}
+
+.toast-error {
+   background-color: #bd362f
+}
+
+.toast-info {
+   background-color: #2f96b4
+}
+
+.toast-warning {
+   background-color: #f89406
+}
+
+.toast-progress {
+   background-color: #000;
+   bottom: 0;
+   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+   filter: alpha(opacity=40);
+   height: 4px;
+   left: 0;
+   opacity: .4;
+   position: absolute
 }
 
 #toast-container {
@@ -11680,36 +11713,6 @@ print {
    width: 96%
 }
 
-#vyager .toast {
-   background-color: #030303
-}
-
-#vyager .toast-success {
-   background-color: #51a351
-}
-
-#vyager .toast-error {
-   background-color: #bd362f
-}
-
-#vyager .toast-info {
-   background-color: #2f96b4
-}
-
-#vyager .toast-warning {
-   background-color: #f89406
-}
-
-#vyager .toast-progress {
-   background-color: #000;
-   bottom: 0;
-   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-   filter: alpha(opacity=40);
-   height: 4px;
-   left: 0;
-   opacity: .4;
-   position: absolute
-}
 
 @media (max-width:240px) {
    #toast-container>div {
