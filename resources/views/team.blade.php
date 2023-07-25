@@ -7,9 +7,10 @@
         <x-page-title title="Notre équipe" />
 
         
-        <x-all-team />
+        <x-all-team :members="$members" />
+
         
-        <x-projects />
+        <x-projects :projects="$projects" />
         
 
         <x-contact />

@@ -6,7 +6,7 @@
 
         <x-page-title title="FAQ" />
 
-        <x-faq />
+        <x-faq :questions="$questions" />
 
         <x-contact />
 

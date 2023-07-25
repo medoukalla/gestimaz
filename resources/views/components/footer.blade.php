@@ -6,7 +6,8 @@
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="footer-left-widget mb-40">
                         <div class="footer-logo">
-                            <img src="{{ asset('app').'/'.setting('site.logo') }}" style=" max-width: 200px; " alt="logo_not_found">
+                            <img src="{{ asset('app').'/'.setting('site.logo') }}" style=" max-width: 200px; "
+                                alt="logo_not_found">
                         </div>
                         <p>
                             <font style="vertical-align: inherit;">
@@ -15,8 +16,8 @@
                                 </font>
                             </font>
                         </p>
-                        
-                        
+
+
                     </div>
                 </div>
                 <div class="col-xl-3 offset-xl-1 col-lg-6 col-md-6">
@@ -47,7 +48,8 @@
                                     </h5>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;padding-left: 33px;">{{ setting('site.phone_2') }}</font>
+                                            <font style="vertical-align: inherit;padding-left: 33px;">{{
+                                                setting('site.phone_2') }}</font>
                                         </font>
                                     </h5>
                                 </div>
@@ -62,7 +64,8 @@
                                     </h5>
                                     <h5>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;padding-left: 33px;">{{ setting('site.email') }}</font>
+                                            <font style="vertical-align: inherit;padding-left: 33px;">{{
+                                                setting('site.email_2') }}</font>
                                         </font>
                                     </h5>
                                 </div>
@@ -111,11 +114,11 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
-    
+
 </footer>
 <!-- footer end -->
 

@@ -6,7 +6,7 @@
 
         <x-page-title title="Nos projets" />
 
-        <x-all-projects />
+        <x-all-projects :projects="$projects" />
 
 
     </main>

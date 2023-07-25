@@ -1,6 +1,3 @@
-@php
-    $projects = \App\Models\Project::get_projects();
-@endphp
 <!-- project start -->
 <section class="project-area pos-rel pt-120 pb-120">
     <div class="container-fluid">

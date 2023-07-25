@@ -53,6 +53,11 @@ class User extends \TCG\Voyager\Models\User
     }
 
 
+    // get all members from the team 
+    static function get_all_team_members() {
+        return User::orderBy('id', 'desc')->where('role_id', 2)->where('deleted_at', null)->get();
+    }
+
 
     // // function to get the logged in all orders 
     // static function get_user_orders( $user_id) {

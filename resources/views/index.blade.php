@@ -8,13 +8,13 @@
 
         <x-about />
 
-        <x-services />
+        <x-services :services="$services" />
 
         <x-feature />
 
-        <x-projects />
+        <x-projects :projects="$projects" />
 
-        <x-team />
+        <x-team :members="$members" />
 
         <x-contact />
 

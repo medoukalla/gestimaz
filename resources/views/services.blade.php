@@ -6,7 +6,7 @@
 
         <x-page-title title="Nos services" />
 
-        <x-all-services />
+        <x-all-services :services="$services" />
 
         <x-about />
 

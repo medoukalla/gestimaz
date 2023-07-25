@@ -1,6 +1,3 @@
-@php
-    $services = \App\Models\Service::get_services();
-@endphp
 <!-- services start -->
 <section class="services-area gray-bg pt-120 pb-90">
     <div class="container">
