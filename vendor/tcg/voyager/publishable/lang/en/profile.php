@@ -1,14 +1,13 @@
 <?php
 
 return [
-    'avatar'          => 'Avatar',
-    'edit'            => 'Editer mon profil',
-    'edit_user'       => 'Editer l\'utilisateur',
-    'password'        => 'Mot de passe',
-    'password_hint'   => 'Laissez vide pour garder le même',
-    'role'            => 'Rôle',
-    'roles'           => 'Rôles',
-    'role_default'    => 'Rôle par défaut',
-    'roles_additional'=> 'Rôles additionnels',
-    'user_role'       => 'Rôle utilisateur',
+    'avatar'                 => 'الصورة الرمزية',
+    'edit'                   => 'تعديل',
+    'edit_user'              => 'تعديل المستخدم',
+    'password'               => 'كلمه السر',
+    'password_hint'          => 'اتركها فارغة إذا لم ترد التعديل عليها',
+    'role'                   => 'الدور',
+    'user_role'              => 'دور المستخدم',
+    'role_default'           => 'الصلاحية',
+    'roles_additional'       => 'الصلاحية الإضافية',
 ];

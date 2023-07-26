@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'footer_copyright'  => 'Fait avec <i class="voyager-heart"></i> par',
-    'footer_copyright2' => 'Fait avec du rhum et encore plus de rhum',
+    'footer_copyright'  => 'صنعت بـ <i class="voyager-heart"></i> بواسطة',
+    'footer_copyright2' => 'مصنوعة باستخدام الكثير من القهوة والشاي بالنعناع',
 ];

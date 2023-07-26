@@ -81,36 +81,48 @@
                             </font>
                         </h3>
                         <ul>
-                            <li><a href="https://wasimmia.github.io/bildhub/index.html#">
+                            <li><a href="{{ route('frontend.services') }}">
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">À propos de nous</font>
+                                        <font style="vertical-align: inherit;">Nos services</font>
                                     </font>
-                                </a></li>
-                            <li><a href="https://wasimmia.github.io/bildhub/index.html#">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Notre processus</font>
-                                    </font>
-                                </a></li>
-                            <li><a href="https://wasimmia.github.io/bildhub/index.html#">
+                                </a>
+                            </li>
+                            
+                            <li><a href="{{ route('frontend.contact') }}">
                                     <font style="vertical-align: inherit;">
                                         <font style="vertical-align: inherit;">Contactez-nous</font>
                                     </font>
-                                </a></li>
-                            <li><a href="https://wasimmia.github.io/bildhub/index.html#">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Nos clients</font>
-                                    </font>
-                                </a></li>
-                            <li><a href="https://wasimmia.github.io/bildhub/index.html#">
+                                </a>
+                            </li>
+
+                            <li><a href="{{ route('frontend.team') }}">
                                     <font style="vertical-align: inherit;">
                                         <font style="vertical-align: inherit;">Notre équipe</font>
                                     </font>
-                                </a></li>
-                            <li><a href="https://wasimmia.github.io/bildhub/index.html#">
+                                </a>
+                            </li>
+
+                            <li><a href="{{ route('frontend.projects') }}">
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Dernières nouvelles</font>
+                                        <font style="vertical-align: inherit;">Nos projets</font>
                                     </font>
-                                </a></li>
+                                </a>
+                            </li>
+                            
+                            <li><a href="{{ route('frontend.faq') }}">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">FAQ</font>
+                                    </font>
+                                </a>
+                            </li>
+
+                            <li><a href="{{ route('voyager.login') }}">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Tableau de bord</font>
+                                </font>
+                            </a>
+                        </li>
+
                         </ul>
                     </div>
                 </div>

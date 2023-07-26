@@ -1,13 +1,13 @@
 <?php
 
 return [
-    'page'           => 'Page|Pages',
-    'page_link_text' => 'Voir toutes les pages',
-    'page_text'      => 'Vous avez :count :string enregistrées. Cliquez sur le bouton ci-dessous pour afficher toutes les pages.',
-    'post'           => 'Article|Articles',
-    'post_link_text' => 'Voir tous les articles',
-    'post_text'      => 'Vous avez :count :string enregistrés. Cliquez sur le bouton ci-dessous pour afficher tous les articles.',
-    'user'           => 'Utilisateur|Utilisateurs',
-    'user_link_text' => 'Voir tous les utilisateurs',
-    'user_text'      => 'Vous avez :count :string enregistrés. Cliquez sur le bouton ci-dessous pour afficher tous les utilisateurs.',
+    'page'           => 'صفحات|صفحة',
+    'page_link_text' => 'عرض جميع الصفحات',
+    'page_text'      => 'لديك :count :string في قاعدة البيانات الخاصة بك. انقر على الزر أدناه لعرض جميع الصفحات.',
+    'post'           => 'مقالات|مقالة',
+    'post_link_text' => 'عرض جميع المقالات',
+    'post_text'      => 'لديك :count :string في قاعدة البيانات الخاصة بك. انقر على الزر أدناه لعرض جميع المقالات.',
+    'user'           => 'أعضاء|عضو',
+    'user_link_text' => 'عرض جميع المستخدمين',
+    'user_text'      => 'لديك :count :string في قاعدة البيانات الخاصة بك. انقر على الزر أدناه لعرض جميع المستخدمين.',
 ];

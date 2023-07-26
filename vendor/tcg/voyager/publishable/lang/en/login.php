@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'loggingin'    => 'Se connecter',
-    'signin_below' => 'Connectez-vous ci-dessous :',
-    'welcome'      => 'Bienvenue dans Voyager, le panneau d\'administration qui manquait à Laravel',
+    'loggingin'    => 'دخول',
+    'signin_below' => 'تسجيل الدخول :',
+    'welcome'      => 'مرحبا بكم في Voyager. لوحة التحكم المكملة للارافيل',
 ];

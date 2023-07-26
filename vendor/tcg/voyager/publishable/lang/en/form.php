@@ -1,15 +1,16 @@
 <?php
 
 return [
-    'field_password_keep'          => 'Laissez vide pour garder le même',
-    'field_select_dd_relationship' => 'Assurez-vous de configurer la relation appropriée dans la méthode :method de la classe :class.',
-    'type_checkbox'                => 'Case à cocher',
-    'type_codeeditor'              => 'Editeur de code',
-    'type_file'                    => 'Fichier',
-    'type_image'                   => 'Image',
-    'type_radiobutton'             => 'Bouton radio',
-    'type_richtextbox'             => 'Champ texte enrichi',
-    'type_selectdropdown'          => 'Menu déroulant',
-    'type_textarea'                => 'Zone de texte',
-    'type_textbox'                 => 'Champ texte',
+    'field_password_keep'          => 'اتركه فارغ لعدم التعديل',
+    'field_select_dd_relationship' => 'تأكد من إعداد العلاقة المناسبة في الطريقة :method الخاصة بالمعرف :class',
+
+    'type_checkbox'       => 'مربع اختيار Checkbox',
+    'type_codeeditor'     => 'محرر أكواد Code Editor',
+    'type_file'           => 'ملف',
+    'type_image'          => 'صورة',
+    'type_radiobutton'    => 'زر اختيار من متعدد Radio Button',
+    'type_richtextbox'    => 'مربع نص منسق Rich Textbox',
+    'type_selectdropdown' => 'قائمة تحديد منسدلة Dropdown',
+    'type_textarea'       => 'منطقة نص Text Area',
+    'type_textbox'        => 'مربع نص Text Box',
 ];

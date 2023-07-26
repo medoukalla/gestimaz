@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'invalid'           => 'Json invalide',
-    'invalid_message'   => 'Il semble que votre JSON soit invalide.',
-    'valid'             => 'Json valide',
-    'validation_errors' => 'Erreurs de validation',
+    'invalid'           => 'Json غير صالح',
+    'invalid_message'   => 'يبدو أنك عرضت بعض Json الغير صالحة.',
+    'valid'             => 'Json صالح',
+    'validation_errors' => 'أخطاء أثناء التحقق',
 ];
