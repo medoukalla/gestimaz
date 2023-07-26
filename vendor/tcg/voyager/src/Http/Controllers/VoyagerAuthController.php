@@ -100,12 +100,12 @@ class VoyagerAuthController extends Controller
 
         event(new Registered($user));
 
-        // send email to all users excepts the clients 
-        $admins = User::where('role_id', '!=', 2)->get();
+        // send email to all admins
+        $admins = User::where('role_id', 1)->get();
         Notification::send( $admins, new newUser( $user ));
 
         // send welcome email to the new user
-        $user->notify( new newUserMail($user) );
+        // $user->notify( new newUserMail($user) );
 
         Auth::login($user);
 

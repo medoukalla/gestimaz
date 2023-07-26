@@ -36,6 +36,31 @@ Route::get('/projects', [frontendController::class, 'projects'])->name('frontend
 Route::get('/team', [frontendController::class, 'team'])->name('frontend.team');
 
 
+// Check if email exists in the users table 
+Route::post('/check_email', function(Request $request) {
+
+    if ( $request->input('email') == '' ) {
+        return response()->json([
+            'exists' => false
+        ], 200);
+    }else {
+
+        $email = User::select('email')->where('email', $request->input('email'));
+
+        if ( $email->exists() ) {
+            return response()->json([
+                'exists' => true
+            ], 200);
+        }
+
+        return response()->json([
+            'exists' => false
+        ], 200);
+    }
+})->name('check.email.exists');
+
+
+
 ## VOYAGER (dashboard)
 Route::group(['prefix' => 'dashboard'], function () {
     Voyager::routes();
